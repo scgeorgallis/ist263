@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Our Favorite foods</title>
+    </head> 
+    <body>
+        <dl>
+            <dt>Pizza</dt>
+            <dd>cheese and pineapple on bread</dd>
+            <dt>Pasta</dt>
+            <dd>chicken alfredo</dd>
+            <dt>Burger</dt>
+            <dd>meat cheese bun</dd>
+        </dl>
+    </body>
+</html>
+
