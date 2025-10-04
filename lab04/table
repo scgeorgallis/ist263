@@ -1,0 +1,30 @@
+<table> 
+    <tr>
+        <th>Name</th>
+        <th>Favorite Food</th>
+        <th>Favorite Animal</th>
+        <th>Least Favorite Animal</th>
+    </tr>
+
+    <tr>
+        <td>Sofia</td>
+        <td>Burrito</td>
+        <td>Pony</td>
+        <td>Snakes</td>
+    </tr>
+
+    <tr>
+        <td>Owen</td>
+        <td>Steak</td>
+        <td>Penguin</td>
+        <td>Spider</td>
+    
+    <tr>
+        <td>Brian</td>
+        <td>Pho</td>
+        <td>Gorilla</td>
+        <td>Spider</td>
+    </tr>
+</table>
+
+
