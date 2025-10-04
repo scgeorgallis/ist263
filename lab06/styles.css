@@ -1,2 +1,6 @@
 body { background-color: white;}
-h1,h2 {c
+h1,h2 {color: palevioletred;}
+body { font-family: "Trebuchet MS" , Helvetica, sans-serif;}
+.evenrow{background-color: #f7e8d7}
+h1 {font-size: 2em}
+h2 {font-size: 1.5em}
