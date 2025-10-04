@@ -1,3 +1,5 @@
 body {
-    background color: lightgray;
+    background-color: lightgray;
+    font-family: "Trebuchet MS" , Helvetica, sans-serif;
+    h1,h2 {color: pink;}
 }
