@@ -36,3 +36,11 @@ nav a {
 nav a:hover {
   background-color: #F7C873; /* highlight color */
 }
+
+footer { margin-top: 2rem; font-size: 0.95rem; color: #3E5E40;}
+
+.copyright { float: left;}
+
+.tagline{float: right; font-style: italic; color: #C25B3A;}
+
+.clear {clear:both;}
