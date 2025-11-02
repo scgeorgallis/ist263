@@ -1,0 +1,38 @@
+body {
+  background-color: #FFF8F1; /* body background */
+  color: #2B2B2B;            /* text color */
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #3E5E40;            /* heading color */
+}
+
+/* Global link color */
+a {
+  color: #C25B3A;            /* link color */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Nav styles */
+nav {
+  background-color: #F1E3D3; /* nav background */
+  padding: 10px;             /* padding = BOX MODEL */
+  margin-bottom: 30px;       /* margin = BOX MODEL */
+}
+
+/* Descendant selector for nav links */
+nav a {
+  color: #3E5E40;            /* nav link color */
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Pseudo selector for hover state */
+nav a:hover {
+  background-color: #F7C873; /* highlight color */
+}
