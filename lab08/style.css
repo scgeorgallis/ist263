@@ -44,3 +44,49 @@ footer { margin-top: 2rem; font-size: 0.95rem; color: #3E5E40;}
 .tagline{float: right; font-style: italic; color: #C25B3A;}
 
 .clear {clear:both;}
+
+.contact { padding: 12px;}
+
+.row { display: flex; gap: 16px; margin: 16px 0;}
+
+.col{ flex: 1; background: #F1E3D3; border-radium: 12px; padding: 16px; min-width:0;}
+
+.col-addr p, .col-links p{magin: 8px 0;}
+.logo {height: 28px; vertical-align: middle; margin-right: 8px;}
+
+.col-form form{ display: grid; gap: 10px;}
+
+.col-form input[type="text"],
+.col-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d8cbbd;
+  border-radius: 8px;
+  font: inherit;
+}
+.col-form fieldset {
+  border: 1px solid #d8cbbd;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+.col-form button,
+.col-form input[type="submit"] {
+  appearance: none;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #F7C873;         
+  color: #2B2B2B;
+  cursor: pointer;
+}
+
+
+.col-map iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 420px;           
+  border-radius: 8px;
+}
+.row-top  .col { background: #F1E3D3; }
+.row-bottom .col { background: #F6EDE3; }
