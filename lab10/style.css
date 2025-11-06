@@ -85,7 +85,7 @@ footer { margin-top: 2rem; font-size: 0.95rem; color: #fffdfd;}
 @media (max-width: 768px) {
   nav a {display: block; width: 100%; text-align: center; padding: 12px 10px; border-radius: 8px; margin-bottom: 8px;} 
 
-  nav a: last-child {margin-bottom: 0;}
+  nav a last-child {margin-bottom: 0;}
   nav span {display: none;} 
 
   .contact-flex > .col {flex: 11 100%;}
