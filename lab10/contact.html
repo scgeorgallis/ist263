@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Sofia's Contact Page </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html">HOME</a><span></span> 
+            <a href="skills.html">SKILLS</a><span></span>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+
+        <main class="container">
+            <h1>CONTACT ME</h1>
+
+            <div class="contact">
+            
+                <div class="row row-top">
+                    <div class="col col-addr">
+                        <h2>ADDRESS</h2>
+                        <p>
+                            Sofia Georgallis<br>
+                            Syracuse University<br>
+                            900 South Crouse Ave<br>
+                            Syracuse, NY 13210
+                        </p>
+                    </div>
+
+                    <div class="col col-links">
+                        <h2>CONNECT</h2>
+                        <p><a href="mailto:scgeorga@syr.edu">scgeorga@syr.edu</a></p>
+                        <p>
+                            <img src="../images/logo-sized.png" alt="LinkedIn Logo" class="connect-logo"><br>
+                            <a href="https://www.linkedin.com/in/sofia-georgallis/" target="_blank">MY LINKEDIN PROFILE</a>
+                        </p>
+                    </div>
+                </div>
+
+                <section class="contact-flex">
+                    <div class="col col-form">
+                        <h2>SEND ME A MESSAGE</h2>
+                        <form action="https://formspree.io/f/mgvljdke" method="post">
+                            <label for="name">YOUR NAME:</label>
+                            <input type="text" id="name" name="name">
+                    
+                            <fieldset>
+                                <legend>HOW DID YOU HEAR ABOUT ME?</legend>
+                                <label><input type="radio" name="source" value="school">SCHOOL</label>
+                                <label><input type="radio" name="source" value="linkedin">LINKEDIN</label> 
+                                <label><input type="radio" name="source" value="other">OTHER</label>
+                            </fieldset>
+            
+                            <label for="message">YOUR MESSAGE:</label>
+                            <textarea id="message" name="message" rows="6" ></textarea>
+
+                            <button type="submit">SUBMIT!</button>
+                        </form>
+                    </div>
+        
+                    <div class="col col-map">
+                        <h2>MAP</h2>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.6238585955443!2d-76.138055!3d43.049344999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3a5e0952113%3A0xa671279445418b15!2s820-900%20S%20Crouse%20Ave%2C%20Syracuse%2C%20NY%2013210!5e0!3m2!1sen!2sus!4v1757825878626!5m2!1sen!2sus"
+                            width="100%" height="320" style="border:0;" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                            title="Map to Syracuse University"></iframe>
+                    </div>
+                </section>
+            </div>
+        </main>
+        
+        
+    </body>
+
+</html>
