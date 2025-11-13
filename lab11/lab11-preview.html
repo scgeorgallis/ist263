@@ -12,6 +12,15 @@
         function TryAgain () {
             document.getElementById("messages").innerHTML =('Wrong Shell - Try Again');
         }
+        function ShuffleShells () {
+            let shellOrder = [1, 2, 3].sort(function() {
+                return Math.random() - 0.5;
+            });
+            console.log("The winning shell is: " + shellOrder[0])
+            document.getElementById("first").style.order = shellOrder[0];
+            document.getElementById("second").style.order = shellOrder[1];
+            document.getElementById("third").style.order = shellOrder[2];
+        }
     </script>
     <link rel="stylesheet" href="animate2.css">
     <style>
@@ -20,7 +29,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="ShuffleShells();">
     <h1>Choose a Walnut</h1>
     <div class="container">
         <img src="../images/walnut.png" alt="first walnut" onclick="WinnerMessage();">
