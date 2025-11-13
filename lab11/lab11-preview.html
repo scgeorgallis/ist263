@@ -11,12 +11,13 @@
             display: flex;
         }
     </style>
+
     <script>
         function WinnerMessage () {
-            document.getElementById("messages").innerHTML = ('You won!');
+            document.getElementById("messages").innerHTML = 'You won!';
         }
         function TryAgain () {
-            document.getElementById("messages").innerHTML =('Wrong Shell - Try Again');
+            document.getElementById("messages").innerHTML ='Wrong Shell - Try Again';
         }
         function ShuffleShells () {
             let shellOrder = [1, 2, 3].sort(function() {
@@ -33,9 +34,9 @@
 <body onload="ShuffleShells();">
     <h1>Choose a Walnut</h1>
     <div class="container">
-        <img src="../images/walnut.png" alt="first walnut" onclick="WinnerMessage();">
-        <img src="../images/walnut.png" alt="second walnut" onclick="TryAgain();">
-        <img src="../images/walnut.png" alt="third walnut" onclick="TryAgain();">
+        <img id="first" class="first" src="../images/walnut.png" alt="first walnut" onclick="WinnerMessage();">
+        <img id="second" class="second" src="../images/walnut.png" alt="second walnut" onclick="TryAgain();">
+        <img id="third" class="third" src="../images/walnut.png" alt="third walnut" onclick="TryAgain();">
     </div>
     <div id="messages"></div>
 </body>
