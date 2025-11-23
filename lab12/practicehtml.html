@@ -31,7 +31,25 @@
 
      </style>
      <script>
+        function PlanetsOff() {
+            document.getElementById("mercury").style.display = "none";
+            document.getElementById("venus").style.display = "none";
+            document.getElementById("earth").style.display = "none";
+            document.getElementById("mars").style.display = "none";
+            document.getElementById("jupiter").style.display = "none";
+            document.getElementById("saturn").style.display = "none";
+            document.getElementById("uranus").style.display = "none";
+            document.getElementById("neptune").style.display = "none";
 
+            document.getElementById("mercuryinfo").style.display = "none";
+            document.getElementById("venusinfo").style.display = "none";
+            document.getElementById("earthinfo").style.display = "none";
+            document.getElementById("marsinfo").style.display = "none";
+            document.getElementById("jupiterinfo").style.display = "none";
+            document.getElementById("saturninfo").style.display = "none";
+            document.getElementById("uranusinfo").style.display = "none";
+            document.getElementById("neptuneinfo").style.display = "none";
+        }
      </script>
  </head>
  <body>
@@ -82,14 +100,14 @@
          </div>
      </div>
      <div id="thumbnails">
-         <img src="../images/mecury.jpg" alt="mercury" id="mercurythumb">
-         <img src="../images/venus.jpg" alt="venus" id="venusthumb">
-         <img src="../images/earth.jpg" alt="earth" id="earththumb">
-         <img src="../images/mars.jpg" alt="mars" id="marsthumb">
-         <img src="../images/jupiter.jpg" alt="jupiter" id="jupiterthumb">
-         <img src="../images/saturn.jpg" alt="saturn" id="saturnthumb">
-         <img src="../images/uranus.jpg" alt="uranus" id="uranusthumb">
-         <img src="../images/neptune.jpg" alt="neptune" id="neptunethumb">
+        <img src="../images/mecury.jpg" alt="mercury" id="mercurythumb" onclick="PlanetsOff()">
+        <img src="../images/venus.jpg" alt="venus" id="venusthumb" onclick="PlanetsOff()">
+        <img src="../images/earth.jpg" alt="earth" id="earththumb" onclick="PlanetsOff()">
+        <img src="../images/mars.jpg" alt="mars" id="marsthumb" onclick="PlanetsOff()">
+        <img src="../images/jupiter.jpg" alt="jupiter" id="jupiterthumb" onclick="PlanetsOff()">
+        <img src="../images/saturn.jpg" alt="saturn" id="saturnthumb" onclick="PlanetsOff()">
+        <img src="../images/uranus.jpg" alt="uranus" id="uranusthumb" onclick="PlanetsOff()">
+        <img src="../images/neptune.jpg" alt="neptune" id="neptunethumb" onclick="PlanetsOff()">
      </div>
 
  </div>
