@@ -22,3 +22,100 @@ html, body {background-color: #ffffff; color: #000;}
   font-weight: 400;
 }
 
+.portfolio-page main {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.portfolio-page section {
+  margin-bottom: 120px;
+}
+
+.portfolio-page h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio-page section:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.portfolio-page section:first-of-type article {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.portfolio-page section:first-of-type img {
+  border: 1px solid #000;
+  max-width: 100%;
+  height: auto;
+}
+
+.portfolio-page section:nth-of-type(2) img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border: 1px solid #000;
+  margin: 5px;
+}
+
+.portfolio-page section:nth-of-type(2) {
+  text-align: center;
+}
+
+.portfolio-page section:nth-of-type(2) p {
+  max-width: 700px;
+  margin: 10px auto;
+  font-size: 0.95rem;
+}
+
+.portfolio-page section:nth-of-type(3) article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-page section:nth-of-type(3) img {
+  width: 160px;
+  height: auto;
+  border: 1px solid #000;
+  margin: 3px;
+}
+
+.portfolio-page section:nth-of-type(4) {
+  text-align: center;
+}
+
+.portfolio-page section:nth-of-type(4) video {
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  border: 1px solid #000;
+}
+
+@media (max-width: 800px) {
+  .portfolio-page section:nth-of-type(4) video {
+    width: 100%;
+  }
+}
+
+.portfolio-page footer {
+  width: 85%;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.portfolio-page footer img {
+  margin: 10px;
+  border-radius: 50%;
+}
