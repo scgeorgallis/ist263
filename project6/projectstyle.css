@@ -19,7 +19,7 @@ html, body {background-color: #ffffff; color: #000;}
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 3rem; 
+  gap: 1rem; 
   margin: 40px 6% 60px;
 }
 
@@ -27,7 +27,7 @@ html, body {background-color: #ffffff; color: #000;}
   color: #000;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 3.3rem;
   text-decoration: none; 
   letter-spacing: 0.5px;
   transition: opacity 0.3s ease;
