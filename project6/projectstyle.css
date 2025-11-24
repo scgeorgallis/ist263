@@ -1,50 +1,133 @@
 html, body {background-color: #ffffff; color: #000;} 
 
 .portfolio-page {
-  font-family: "Work Sans", Arial, sans-serif; color: #000; background: #fff; line-height: 1.6;}
+  font-family: "Work Sans", Arial, sans-serif; 
+  color: #000; 
+  background: #fff; 
+  line-height: 1.6;}
 
-.portfolio-page h1, .portfolio-page h2, .portfolio-page h3 {font-family: "Playfair Display", serif; font-weight: 700; letter-spacing: 0.3px;}
+.portfolio-page h1, .portfolio-page h2, .portfolio-page h3 {
+  font-family: "Playfair Display", serif; 
+  font-weight: 700; 
+  letter-spacing: 0.3px;}
 
 /*navigation*/
-.portfolio-page nav {display: flex; justify-content: flex-end; align-items: right; gap: 1rem; margin: 10px 6% 20px;}
+.portfolio-page nav {
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: right; 
+  gap: 1rem; 
+  margin: 10px 6% 20px;}
 
-.portfolio-page nav a {color: #000; font-family: "Playfair Display", serif; font-weight: 700; font-size: 1.5rem; text-decoration: none; 
-  letter-spacing: 0.5px; transition: opacity 0.3s ease; cursor: pointer;}
+.portfolio-page nav a {
+  color: #000; 
+  font-family: "Playfair Display", serif; 
+  font-weight: 700; font-size: 1.5rem; 
+  text-decoration: none; 
+  letter-spacing: 0.5px; 
+  transition: opacity 0.3s ease; 
+  cursor: pointer;}
 
 .portfolio-page nav a:hover {opacity: 0.6;}
 
 /*header section*/
-.portfolio-page header {width: 100%; margin: 0 auto 60px; text-align: center;}
+.portfolio-page header {
+  width: 100%; 
+  margin: 0 auto 60px; 
+  text-align: center;}
 
-.portfolio-page header video {width: 100%; height: auto; border: solid #000; border-radius: 1px; padding: 0; box-sizing: border-box; 
-  display: block; margin: 0 auto 15px;}
+.portfolio-page header video {
+  width: 100%; 
+  height: auto; 
+  border: solid #000; 
+  border-radius: 1px; 
+  padding: 0; 
+  box-sizing: border-box; 
+  display: block; 
+  margin: 0 auto 15px;}
 
-.portfolio-page header p { font-family: "Work Sans", Arial, sans-serif; font-style: italic; font-size: 0.75rem; color: #333; text-align: center;
-  max-width: 700px; margin: 0 auto; line-height: 1.0;}
+.portfolio-page header p { 
+  font-family: "Work Sans", Arial, sans-serif; 
+  font-style: italic; 
+  font-size: 0.75rem; 
+  color: #333; 
+  text-align: center;
+  max-width: 700px; 
+  margin: 0 auto; 
+  line-height: 1.0;}
 
 /* STYLING + MOOD BOARDS SECTION */
-.portfolio-page .styling-section {width: 90%; margin: 0 auto 100px; text-align: center;}
+.portfolio-page .styling-section {
+  width: 90%;
+  margin: 0 auto 100px;
+  text-align: center;
+}
 
-.portfolio-page .styling-section h2 {font-family: "Playfair Display", serif; font-weight: 700; font-size: 2rem; letter-spacing: 1px; 
-  text-transform: uppercase; margin-bottom: 0.3rem; border: none;}
+.portfolio-page .styling-section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0 auto;
+  border: none;
+}
 
-.portfolio-page .styling-section > p {font-style: italic; font-size: 1rem; color: #333; margin-bottom: 3rem; max-width: 750px; 
-  margin-left: auto; margin-right: auto;line-height: 1.6;}
+.portfolio-page .styling-section > p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 3rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
 
-.portfolio-page .styling-section .projects {display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; align-items: flex-start;
-  margin-top: 2rem;}
+.portfolio-page .styling-section .projects {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
 
-.portfolio-page .styling-section .projects article {flex: 1 1 45%;max-width: 500px;text-align: left;}
+.portfolio-page .styling-section .projects article {
+  flex: 1 1 45%;
+  max-width: 500px;
+  text-align: left;
+}
 
-.portfolio-page .styling-section .projects article h3 {font-family: "Playfair Display", serif;font-size: 1.3rem;margin-bottom: 0.4rem;}
+.portfolio-page .styling-section .projects article h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
 
-.portfolio-page .styling-section .projects article p {font-family: "Work Sans", sans-serif;font-size: 0.95rem;line-height: 1.5;
-  margin-bottom: 0.8rem;}
+.portfolio-page .styling-section .projects article p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
 
-.portfolio-page .styling-section .projects article img {display: block; margin: 0 auto; border: 1px solid #000;max-width: 100%;
-  height: auto;}
+.portfolio-page .styling-section .projects article img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #000;
+  max-width: 100%;
+  height: auto;
+}
 
 @media (max-width: 800px) {
-  .portfolio-page .styling-section .projects {flex-direction: column;align-items: center;}
-  .portfolio-page .styling-section .projects article {text-align: center;}
+  .portfolio-page .styling-section .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .portfolio-page .styling-section .projects article {
+    text-align: center;
+  }
 }
