@@ -66,23 +66,24 @@ html, body {background-color: #ffffff; color: #000;}
 .portfolio-page .styling-section h2 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-style: italic;
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 0 auto;
+  margin-bottom: 3rem;
   border: none;
 }
 
 .portfolio-page .styling-section > p {
+  font-family: "Work Sans", Arial, sans-serif; 
   font-style: italic;
-  font-size: 1rem;
+  font-size: .75rem;
   color: #333;
   margin-bottom: 3rem;
-  max-width: 750px;
+  max-width: 700px;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.0;
 }
 
 .portfolio-page .styling-section .projects {
