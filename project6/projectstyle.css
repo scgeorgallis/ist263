@@ -254,15 +254,15 @@ html, body {
   font-style: italic;
   font-size: 0.75rem;
   color: #333;
-  margin: 0 auto 2.rem;
+  margin: 0 auto 2rem;
   max-width: 700px;
   line-height: 1;}
 
 /* Layout grid */
 .portfolio-page .graphic-section .design-info {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 40px;
   margin: 0 auto;
   max-width: 1200px;}
@@ -270,6 +270,7 @@ html, body {
 /* text blocks */
 .portfolio-page .graphic-section .leftside-info,
 .portfolio-page .graphic-section .right-info {
+  flex: 1;
   text-align: left;}
 
 .portfolio-page .graphic-section .leftside-info h3 {
@@ -290,16 +291,16 @@ html, body {
 
 /* images */
 .portfolio-page .graphic-section .design-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  flex: 2;
+  display: flex;
   justify-content: center;
-  align-items: center;}
+  align-items: center;
+  gap: 15px;}
 
 .portfolio-page .graphic-section .design-grid img {
   width: 100%;
+  max-width: 350px;
   height: auto;
-  max-height: 500px;
   object-fit: contain;
   display: block;
   border: none;}
@@ -307,12 +308,14 @@ html, body {
 /* Responsive stuff */
 @media (max-width: 900px) {
   .portfolio-page .graphic-section .design-info {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
     text-align: center;}
 
   .portfolio-page .graphic-section .design-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: auto;}
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;}
 
   .portfolio-page .graphic-section .leftside-info,
   .portfolio-page .graphic-section .right-info {
