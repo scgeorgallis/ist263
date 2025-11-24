@@ -261,28 +261,50 @@ html, body {
 /* Layout grid */
 .portfolio-page .graphic-section .design-info {
   display: grid;
-  grid-template-columns: 1fr minmax(600px, 2fr) 1fr;
-  align-items: start;        
+  grid-template-columns: 1fr 2fr 1fr;  
+  align-items: center;                
+  justify-items: center;              
   gap: 40px;
   margin: 0 auto;
-  max-width: 1200px;}
+  max-width: 1200px;
+  position: relative;}
 
+.portfolio-page .graphic-section .leftside-info,
+.portfolio-page .graphic-section .right-info {
+  text-align: left;
+  align-self: center;}
+
+.portfolio-page .graphic-section .leftside-info h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.3rem;}
+
+.portfolio-page .graphic-section .leftside-info p,
+.portfolio-page .graphic-section .right-info p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  color: #111;
+  margin: 0;}
+
+/* Image grid */
 .portfolio-page .graphic-section .design-grid {
   display: flex;
   justify-content: center;
-  align-items: flex-start;     
-  gap: 20px;}
+  align-items: center;
+  gap: 15px;}
 
-/* Images */
 .portfolio-page .graphic-section .design-grid img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border: none;}
+  width: auto;
+  height: 380px;       /* fixed consistent height */
+  object-fit: cover;
+  border: none;
+  display: block;}
 
-/* Responsive stuff*/
+/* Responsive stuff */
 @media (max-width: 900px) {
   .portfolio-page .graphic-section .design-info {
     grid-template-columns: 1fr;
@@ -293,5 +315,6 @@ html, body {
     justify-content: center;}
 
   .portfolio-page .graphic-section .design-grid img {
-    max-width: 90%;}
+    width: 90%;
+    height: auto;}
 }
