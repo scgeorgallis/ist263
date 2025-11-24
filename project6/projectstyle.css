@@ -109,18 +109,21 @@ html, body {
 
 /*subheadings and text*/
 .portfolio-page .styling-section .projects article h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.4rem;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   line-height: 1;
-  margin-bottom: 0.2rem;}
+  margin-bottom: 0.3rem;
+  white-space: nowrap;}
 
 .portfolio-page .styling-section .projects article p {
   font-family: "Work Sans", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  margin-bottom: 0.6rem;}
+  font-size: 0.85rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;}
+  
 
 /*images*/
 .portfolio-page .styling-section .projects article img {
