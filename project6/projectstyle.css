@@ -1,4 +1,11 @@
-html, body {background-color: #ffffff; color: #000;} 
+html, body {
+  background-color: #ffffff; 
+  color: #000;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding:0;} 
 
 .portfolio-page {
   font-family: "Work Sans", Arial, sans-serif; 
