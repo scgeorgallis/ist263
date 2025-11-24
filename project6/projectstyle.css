@@ -261,28 +261,28 @@ html, body {
 /* Layout grid */
 .portfolio-page .graphic-section .design-info {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;  
-  align-items: center;
+  grid-template-columns: 1fr minmax(600px, 2fr) 1fr;
+  align-items: start;        
   gap: 40px;
   margin: 0 auto;
   max-width: 1200px;}
 
-/* Image grid */
 .portfolio-page .graphic-section .design-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 15px;}
+  align-items: flex-start;     
+  gap: 20px;}
 
+/* Images */
 .portfolio-page .graphic-section .design-grid img {
   width: 100%;
-  max-width: 300px;     
+  max-width: 300px;
   height: auto;
   object-fit: contain;
   display: block;
   border: none;}
 
-/* Responsive stuff */
+/* Responsive stuff*/
 @media (max-width: 900px) {
   .portfolio-page .graphic-section .design-info {
     grid-template-columns: 1fr;
