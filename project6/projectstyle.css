@@ -401,3 +401,75 @@ html, body {
     width: 180px;
     height: 110px;}
 }
+
+/* FOOTER */
+.portfolio-page .portfolio-footer {
+  width: 88%;
+  margin: 60px auto 40px;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  color: #111;}
+
+.portfolio-page .portfolio-footer hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin-bottom: 30px;}
+
+.portfolio-page .portfolio-footer .footer-info p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 5px 0;}
+
+.portfolio-page .portfolio-footer .footer-info a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  transition: opacity 0.3s ease;}
+
+.portfolio-page .portfolio-footer .footer-info a:hover {
+  opacity: 0.6;}
+
+.portfolio-page .portfolio-footer .footer-fun {
+  margin-top: 40px;}
+
+.portfolio-page .portfolio-footer .footer-fun h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;}
+
+.portfolio-page .portfolio-footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;}
+
+.portfolio-page .portfolio-footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: transform 0.3s ease;}
+
+.portfolio-page .portfolio-footer .social-icons img:hover {
+  transform: scale(1.1);}
+
+.portfolio-page .portfolio-footer .tagline {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 25px;
+  color: #333;}
+
+.portfolio-page .portfolio-footer .copyright {
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 8px;}
+
+/* Responsive stuff*/
+@media (max-width: 900px) {
+  .portfolio-page .portfolio-footer {
+    width: 92%;}
+}
+
