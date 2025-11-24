@@ -274,6 +274,21 @@ html, body {
   max-width: 400px;
   margin-left: 8%;}
 
+.portfolio-page .graphic-section .leftside-info h3{
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 0.3rem;}
+
+.portfolio-page .graphic-section .leftside-info p{
+  font-family:"Work Sans", sans-serif;
+  font-size: .85rem;
+  line-height: 1.2;
+  color:#111;
+  margin:0;}
+
 .portfolio-page .graphic-section .design-grid {
   display: flex;
   justify-content: center;
@@ -295,6 +310,13 @@ html, body {
   align-self: flex-end;
   max-width: 400px;
   margin-right: 8%;}
+
+.portfolio-page .graphic-section .right-info p{
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  color:#111;
+  margin: 0;}
 
 /* Responsive stuff */
 @media (max-width: 900px) {
