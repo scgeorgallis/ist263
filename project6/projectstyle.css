@@ -261,17 +261,16 @@ html, body {
 /* Layout grid */
 .portfolio-page .graphic-section .design-info {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr; 
+  grid-template-columns: 0.9fr 1.8fr 0.9fr; 
   align-items: center;
   justify-items: center;
-  gap: 30px;
+  gap: 40px;
   margin: 0 auto;
-  max-width: 1300px;}
+  max-width: 1200px;}
 
 .portfolio-page .graphic-section .leftside-info,
 .portfolio-page .graphic-section .right-info {
-  width: 100%;
-  max-width: 250px;
+  max-width: 240px;
   text-align: left;}
 
 .portfolio-page .graphic-section .design-grid {
