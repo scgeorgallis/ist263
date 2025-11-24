@@ -20,7 +20,7 @@ html, body {background-color: #ffffff; color: #000;}
   justify-content: flex-end;
   align-items: right;
   gap: 1rem; 
-  margin: 20px 6% 40px;
+  margin: 10px 6% 20px;
 }
 
 .portfolio-page nav a {
