@@ -84,52 +84,54 @@ html, body {background-color: #ffffff; color: #000;}
 
 /*grid*/
 .portfolio-page .styling-section .projects {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 80px;
+  row-gap: 100px;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  flex-wrap: wrap;}
+  margin-top: 3rem;}
 
 /*blocks*/
 .portfolio-page .styling-section .projects article {
-  flex: 1 1 45%;
-  max-width: 500px;
-  text-align: left;
-  margin: 0;}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;}
 
 /*subheadings and text*/
 .portfolio-page .styling-section .projects article h3 {
   font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 3rem;
+  font-weight: 800;
+  font-size: 2.8rem;
   text-transform: uppercase;
-  line-height: 1;
-  margin-bottom: 0.2rem;}
+  line-height: 1.1;
+  margin-bottom: 0.3rem;}
 
 .portfolio-page .styling-section .projects article p {
   font-family: "Work Sans", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1;
-  margin: 0 0 0.6rem;}
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 400px;
+  margin: 0;}
 
 /*images*/
 .portfolio-page .styling-section .projects article img {
-  display: block;
-  margin: 0.5rem auto 0;
-  border: none;
-  max-width: 100%;
-  height: auto;}
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  border: none;}
 
 /*response stuff*/
 @media (max-width: 900px) {
-  .portfolio-page .styling-section h2 {
-    font-size: 3.2rem;}
-
   .portfolio-page .styling-section .projects {
+    grid-template-columns: 1fr;
+    row-gap: 60px;}
+
+  .portfolio-page .styling-section .projects article{
     flex-direction: column;
-    gap: 40px;
-    align-items: center;}
-  
-  .portfolio-page .styling-section .projects article {
     text-align: center;}
+  
+  .portfolio-page .styling-section .projects article p {
+    max-width: 100%;}
 }
