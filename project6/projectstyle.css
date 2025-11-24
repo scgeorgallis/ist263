@@ -145,3 +145,95 @@ html, body {
   .portfolio-page .styling-section .projects article p {
     max-width: 100%;}
 }
+
+/* PHOTOGRAPHY SECTION */
+.portfolio-page .photography-section {
+  width: 88%;
+  margin: 0 auto 100px;
+  text-align: center;}
+
+/* title header */
+.portfolio-page .photography-section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-bottom: 0.6rem;}
+
+/* subtitle */
+.portfolio-page .photography-section > p {
+  font-family: "Work Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #333;
+  margin: 0 auto 2rem;
+  max-width: 700px;
+  line-height: 1.2;}
+
+/* grid layout */
+.portfolio-page .photography-section .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  max-width: 1100px;}
+
+/* photo blocks */
+.portfolio-page .photography-section .photo-grid article {
+  text-align: left;}
+
+/* subheadings */
+.portfolio-page .photography-section .photo-grid article h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1;
+  margin-bottom: 0.4rem;}
+
+/* subtext */
+.portfolio-page .photography-section .photo-grid article p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  color: #111;
+  margin-bottom: 0.4rem;}
+
+/* image styling */
+.portfolio-page .photography-section .photo-grid article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none;
+  margin: 0.5rem 0;
+  object-fit: cover;}
+
+/* below grid */
+.portfolio-page .photography-section .experiments {
+  margin-top: 50px;}
+
+.portfolio-page .photography-section .experiments h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;}
+
+.portfolio-page .photography-section .experiments img {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  border: none;}
+
+/* responsive stuff */
+@media (max-width: 900px) {
+  .portfolio-page .photography-section h2 {
+    font-size: 3.2rem;}
+  .portfolio-page .photography-section .photo-grid {
+    grid-template-columns: 1fr;}
+}
