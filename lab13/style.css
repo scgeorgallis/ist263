@@ -73,11 +73,29 @@ footer {
 
 .skill-icon { width: 60px; height: auto; display: block; margin: 0 auto 0.5rem; }
 
-.other-skills {background: #e8ccde; color: #111; border-radius: 12px;padding: 1rem;}
+.other-skills {
+  background: #e8ccde;       
+  color: #000000;            
+  border-radius: 12px;
+  padding: 1rem;
+}
 
-.other-skills h2 { margin: 0 0 0.5rem; font-size: 1.1rem; }
+.other-skills h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
 
-.other-skills ul { margin: 0; padding-left: 1.1rem; }
+.other-skills ul {
+  list-style: disc;          
+  margin: 0;
+  padding-left: 1.5rem;      
+}
+
+.other-skills li {
+  background: none !important;
+  padding-left: 0 !important;
+}
+
 
 .skills-table, .skills-table th, .skills-table td { border: 1px solid black; border-collapse: collapse; }
 
