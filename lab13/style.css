@@ -2,9 +2,11 @@ body { background-color: #fffefd; color: #2B2B2B;font-family: Arial, sans-serif}
 
 h1, h2, h3 {color: #000000}
 
-a { color: #dc2e9c; text-decoration: none;}
+a { color: #670f47; text-decoration: none;}
 
 a:hover {text-decoration: underline;}
+
+.col-links a { color: #000000;   font-weight: bold;}
 
 nav {background-color: #f6b7d7; padding: 10px;margin-bottom: 30px;}
 
