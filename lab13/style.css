@@ -12,11 +12,20 @@ nav a {color: #000000; padding: 5px; border-radius: 4px;}
 
 nav a:hover {background-color: #7e73f7; }
 
-footer { margin-top: 2rem; font-size: 0.95rem; color: #fffdfd;}
+footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #111111;         
+}
 
-.copyright { float: left;}
+.copyright { float: left; }
 
-.tagline{float: right; font-style: italic; color: #ffd6c8;}
+.tagline {
+  float: right;
+  font-style: italic;
+  color: #111111;         
+}
+
 
 .clear {clear:both;}
 
@@ -90,5 +99,18 @@ footer { margin-top: 2rem; font-size: 0.95rem; color: #fffdfd;}
 
   .contact-flex > .col {flex: 11 100%;}
 }
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  padding: 8px 12px;
+  background-color: #000000;  
+  color: #ffffff;             
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
 
 
