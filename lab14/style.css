@@ -1,5 +1,10 @@
 body { background-color: #fffefd; color: #2B2B2B;font-family: Arial, sans-serif}
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+}
+
 h1, h2, h3 {color: #000000}
 
 a { color: #360c26; text-decoration: none;}
@@ -127,10 +132,7 @@ footer {
   padding-left: 0 !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Emilys Candy", serif;
-  font-weight: 400;
-}
+
 
 
 
