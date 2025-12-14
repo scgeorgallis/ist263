@@ -37,7 +37,7 @@ footer {
 
 .row { display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap; align-items: stretch;}
 
-.col{ flex: 1 1 380px; min-width: 260px; background: #ffffff; border-radius: 12px; padding: 16px; min-width:0;}
+.col{ flex: 1 1 320px; min-width: 240px; background: #ffffff; border-radius: 12px; padding: 16px; min-width:0;}
 
 .col-addr p, .col-links p{margin: 8px 0;}
 
@@ -51,9 +51,9 @@ footer {
 
 .col-form button, .col-form input[type="submit"] {appearance: none; border: 1px solid #111; border-radius: 10px; padding: 10px 14px; background: #fffefd;color: #2B2B2B; cursor: pointer;}
 
-.row-top  .col { background: #F1E3D3; }
+.row-top  .col { background: #ffd5eb; }
 
-.row-bottom .col { background: #F6EDE3; }
+.row-bottom .col { background: #d2d2d1; }
 
 .container { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
 
@@ -73,29 +73,15 @@ footer {
 
 .skill-icon { width: 60px; height: auto; display: block; margin: 0 auto 0.5rem; }
 
-.other-skills {
-  background: #e8ccde;       
-  color: #000000;            
-  border-radius: 12px;
-  padding: 1rem;
-}
+.other-skills { background: #e8ccde; color: #000000; border-radius: 12px; padding: 1rem; font-size: 0.95rem;}
 
-.other-skills h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-}
+.other-skills h2 { margin: 0 0 0.5rem; font-size: 1.1rem;}
 
-.other-skills ul {
-  list-style: disc;          
-  margin: 0;
-  padding-left: 1.5rem;      
-}
+.other-skills ul { list-style: disc; margin: 0; padding-left: 1.5rem;}
 
-.other-skills li {
-  background: none !important;
-  padding-left: 0 !important;
-}
+.other-skills li { background: none !important; padding-left: 0 !important; margin-bottom: 10px; line-height: 1.4;}
 
+.other-skills li:last-child {margin-bottom: 0;}
 
 .skills-table, .skills-table th, .skills-table td { border: 1px solid black; border-collapse: collapse; }
 
@@ -103,7 +89,7 @@ footer {
 
 .matrix { margin-top: 1.25rem; }
 
-.evenrow { background: #ffd6c8; }
+.evenrow { background: #d5d2d2; }
 
 .responsive-img {display: block; max-width: 100%; width: 100%; height: auto;}
 
