@@ -11,17 +11,28 @@
 </head>
 
 <script>
-  const reveals = document.querySelectorAll(".reveal");
-  window.addEventListener("scroll", () => {
-    reveals.forEach((el) => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 80) {
-        el.classList.add("visible");
-      }
-    });
-  });
+  const text = "CREATIVE. PASSIONATE. CURIOUS.";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, 80);
+    }
+  }
+  window.onload = type;
 </script>
 
+<script>
+  window.addEventListener("scroll", () => {
+    const nav = document.querySelector(".main-nav");
+    if (window.scrollY > 50) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
 
 <body>
   <nav class="main-nav">
@@ -39,9 +50,9 @@
       <img src="../project-images/header-image.JPG" alt="Header Image">
     </div>
 
-    <div class="hero-text reveal">
+    <div class="hero-text ">
       <h1>SOFIA GEORGALLIS</h1>
-      <h2><em>CREATIVE. PASSIONATE. CURIOUS.</em></h2>
+      <h2 id="typing"></h2>
       <p>
         I'm a junior at Syracuse University studying Innovation, Society, and Technology with a focus in Digital Retail Strategies.
         This site is my creative portfolio, a space where I share the projects I love most. I’ve styled for campus magazines,
@@ -53,7 +64,7 @@
   </header>
 
   <main>
-    <section class="sneakpeek-section reveal">
+    <section class="sneakpeek-section ">
       <h2>SNEAK PEEK</h2>
       <div class="sneakpeek-grid">
         <div class="sneak-item">
