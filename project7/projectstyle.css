@@ -651,3 +651,89 @@ html, body {
     height: 250px;
   }
 }
+
+.homepage-footer {
+  width: 88%;
+  margin: 80px auto 40px;
+  font-family: "Work Sans", sans-serif;
+  color: #111;
+}
+
+.homepage-footer hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin-bottom: 30px;
+}
+
+.homepage-footer .footer-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 40px;
+}
+
+.homepage-footer .footer-info {
+  text-align: left;
+  flex: 1;
+}
+
+.homepage-footer .footer-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+.homepage-footer .footer-info strong {
+  font-family: "Bebas Neue", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+}
+
+.homepage-footer .footer-fun {
+  text-align: right;
+  flex: 0 0 auto;
+}
+
+.homepage-footer .footer-fun h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  margin-bottom: 10px;
+}
+
+.homepage-footer .social-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.homepage-footer .social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.homepage-footer .social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.homepage-footer .tagline {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: #333;
+}
+
+.homepage-footer .copyright {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 8px;
+}
