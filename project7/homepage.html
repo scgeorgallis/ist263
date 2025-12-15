@@ -99,31 +99,33 @@
     </footer>
 
     <script>
-        const text = "CREATIVE. PASSIONATE. CURIOUS.";
-        const typingEl = document.getElementById("typing");
-        let i = 0;
-        let deleting = false;
+  const text = "CREATIVE. PASSIONATE. CURIOUS.";
+  const typingEl = document.getElementById("typing");
+  let i = 0;
+  let deleting = false;
 
-        function typeLoop() {
-            if (!deleting && i < text.length) {
-            typingEl.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeLoop, 80);
-            } else if (i === text.length && !deleting) {
-            deleting = true;
-            setTimeout(typeLoop, 1500); // pause before deleting
-            } else if (deleting && i > 0) {
-            typingEl.innerHTML = text.substring(0, i - 1);
-            i--;
-            setTimeout(typeLoop, 40);
-            } else if (deleting && i === 0) {
-            deleting = false;
-            setTimeout(typeLoop, 600); // pause before retyping
-            }
-        }
+  function typeLoop() {
+    if (!deleting && i < text.length) {
+      typingEl.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeLoop, 80);
+    } else if (i === text.length && !deleting) {
+      deleting = true;
+      setTimeout(typeLoop, 1500); // pause before deleting
+    } else if (deleting && i > 0) {
+      typingEl.innerHTML = text.substring(0, i - 1);
+      i--;
+      setTimeout(typeLoop, 40);
+    } else if (deleting && i === 0) {
+      deleting = false;
+      setTimeout(typeLoop, 600); // pause before retyping
+    }
+  }
 
-        window.onload = typeLoop;
-    </script>
+  window.onload = typeLoop;
+</script>
+
+    
 
 </body>
 </html>
