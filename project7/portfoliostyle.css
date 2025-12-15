@@ -393,3 +393,18 @@ footer .copyright {
   }
   .social-icons { justify-content: center; }
 }
+
+/* fix nav cutoff & header alignment */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  padding-top: 5px;
+}
+
+/* ensure header sits below nav */
+.portfolio-header {
+  margin-top: 20px;
+}
