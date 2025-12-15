@@ -10,6 +10,27 @@
   <link rel="stylesheet" href="projectstyle.css">
 </head>
 
+<script>
+  // Typing animation stays here (keep your existing one above this)
+
+  // --- Scroll animation setup ---
+  const sections = document.querySelectorAll("main section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible", "bounce");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+
 <body>
   <nav class="main-nav">
     <div class="nav-container">
@@ -123,7 +144,28 @@
   }
 
   window.onload = typeLoop;
+  // Typing effect (keep your existing looping one above)
+
+  // --- Scroll animations ---
+  const sections = document.querySelectorAll("main section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // alternate directions based on section order
+        entry.target.classList.add(
+          "visible",
+          index % 2 === 0 ? "fade-left" : "fade-right",
+          "bounce"
+        );
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
 </script>
+
 
     
 

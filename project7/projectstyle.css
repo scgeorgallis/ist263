@@ -429,3 +429,152 @@ footer .copyright {
     padding: 0 5%;
   }
 }
+
+/* --- ROUNDED HEADER EDGES --- */
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+  height: 85vh;
+  overflow: hidden;
+  border-radius: 30px; /* smooth curved edges */
+  margin: 40px auto 0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hero-media video,
+.hero-media img {
+  flex: 1 1 50%;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+  border-radius: 0; /* unified edges, handled by parent container */
+}
+
+/* --- SECTION SCROLL-IN EFFECT BASE STYLES --- */
+section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+/* when active */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* optional: slight bounce for energy */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+section.bounce {
+  animation: bounceIn 0.9s ease forwards;
+}
+
+/* ensure header stays visible without animation flicker */
+header {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* --- ROUNDED HEADER EDGES --- */
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+  height: 85vh;
+  overflow: hidden;
+  border-radius: 30px;
+  margin: 40px auto 0;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+.hero-media video,
+.hero-media img {
+  flex: 1 1 50%;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: none;
+}
+
+/* --- SCROLL ANIMATION BASE STYLES --- */
+section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+/* visible state */
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* directional animations */
+section.fade-left {
+  transform: translateX(-80px);
+}
+section.fade-right {
+  transform: translateX(80px);
+}
+section.fade-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+section.fade-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* bounce ease-in on top */
+section.bounce {
+  animation: bounceIn 1s ease forwards;
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* header should always stay visible, no scroll effect */
+header {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* responsiveness stays clean */
+@media (max-width: 900px) {
+  section.fade-left,
+  section.fade-right {
+    transform: translateY(40px);
+  }
+}
