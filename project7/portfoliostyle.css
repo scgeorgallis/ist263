@@ -83,7 +83,8 @@ p { font-family: "Work Sans", sans-serif; }
   border-radius: 30px;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeUp 1.2s ease-out forwards;
+  animation: fadeUp 1.2s ease-out forwards; /* auto plays */
+  animation-delay: 0.1s;
 }
 
 .portfolio-header p {
@@ -95,7 +96,14 @@ p { font-family: "Work Sans", sans-serif; }
   text-align: justify;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeUp 1s ease-out 0.6s forwards;
+  animation: fadeUp 1s ease-out 0.8s forwards; /* slight delay after video */
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* === SECTIONS === */
