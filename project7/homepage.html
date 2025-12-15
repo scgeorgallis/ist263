@@ -10,6 +10,19 @@
   <link rel="stylesheet" href="projectstyle.css">
 </head>
 
+<script>
+  const reveals = document.querySelectorAll(".reveal");
+  window.addEventListener("scroll", () => {
+    reveals.forEach((el) => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 80) {
+        el.classList.add("visible");
+      }
+    });
+  });
+</script>
+
+
 <body>
   <nav class="main-nav">
     <div class="nav-container">
@@ -26,7 +39,7 @@
       <img src="../project-images/header-image.JPG" alt="Header Image">
     </div>
 
-    <div class="hero-text">
+    <div class="hero-text reveal">
       <h1>SOFIA GEORGALLIS</h1>
       <h2><em>CREATIVE. PASSIONATE. CURIOUS.</em></h2>
       <p>
@@ -40,7 +53,7 @@
   </header>
 
   <main>
-    <section class="sneakpeek-section">
+    <section class="sneakpeek-section reveal">
       <h2>SNEAK PEEK</h2>
       <div class="sneakpeek-grid">
         <div class="sneak-item">

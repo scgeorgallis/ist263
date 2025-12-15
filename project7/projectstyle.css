@@ -857,3 +857,28 @@ header img {
   border-bottom: 1px solid #000;
   opacity: 0.7;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-text h1 {
+  transition: text-shadow 0.4s ease;
+}
+.hero-text h1:hover {
+  text-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.social-icons img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-icons img:hover {
+  transform: translateY(-5px) scale(1.05);
+  filter: brightness(1.2);
+}
