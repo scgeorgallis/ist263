@@ -408,3 +408,75 @@ footer .copyright {
 .portfolio-header {
   margin-top: 20px;
 }
+
+/* === TYPOGRAPHY + LAYOUT RESET for section consistency === */
+
+/* global section spacing reset */
+.portfolio-page section {
+  width: 88%;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+/* title headers (like STYLING, PHOTOGRAPHY, etc.) */
+.portfolio-page section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+
+/* section subtitles (italic intro text under h2) */
+.portfolio-page section > p {
+  font-family: "Work Sans", sans-serif;
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #333;
+  margin: 0 auto 2.5rem;
+  max-width: 700px;
+  line-height: 1.2;
+}
+
+/* subheadings inside each section (like “Personal Collections”, “Abstract Archive”, etc.) */
+.portfolio-page section h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  color: #000;
+}
+
+/* descriptive text under subheadings */
+.portfolio-page section article p,
+.portfolio-page section .info-grid p,
+.portfolio-page section .under-info p,
+.portfolio-page section .design-info p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+/* images and grids keep original formatting */
+.portfolio-page .photo-grid img,
+.portfolio-page .design-grid img,
+.portfolio-page .video-grid video {
+  border: none;
+  border-radius: 4px;
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* center under-info blocks */
+.portfolio-page .under-info {
+  text-align: center;
+  margin-top: 3rem;
+}
