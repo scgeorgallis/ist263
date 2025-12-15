@@ -708,3 +708,7 @@ section.fade-left.visible, section.fade-right.visible {
   height: 85vh;
   object-fit: cover;
 }
+
+.placeholder {
+  visibility: hidden;
+}
