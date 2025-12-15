@@ -134,5 +134,50 @@
         <p class="tagline">"CREATIVE. PASSIONATE. CURIOUS."</p>
         <p class="copyright">&copy; 2025 Sofia Georgallis  &trade;</p>
     </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ============================
+     SCROLL ANIMATIONS (Portfolio)
+  ============================ */
+  const sections = document.querySelectorAll("main section");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Fade / bounce reveal
+          entry.target.classList.add(
+            "visible",
+            index % 2 === 0 ? "fade-left" : "fade-right",
+            "bounce"
+          );
+
+          // Stagger inner items like images or videos
+          const innerItems = entry.target.querySelectorAll("img, video, article");
+          innerItems.forEach((item, idx) => {
+            item.style.transitionDelay = `${idx * 0.12}s`;
+            item.classList.add("visible");
+          });
+        } else {
+          // Reset when leaving viewport (so it can replay)
+          entry.target.classList.remove("visible", "bounce");
+          const innerItems = entry.target.querySelectorAll("img, video, article");
+          innerItems.forEach((item) => {
+            item.classList.remove("visible");
+            item.style.transitionDelay = "0s";
+          });
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+
+});
+</script>
+
     </body>
 </html>

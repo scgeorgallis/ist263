@@ -98,7 +98,9 @@
         <p class="copyright">&copy; 2025 Sofia Georgallis &trade;</p>
     </footer>
 
-    <script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
   /* ============================
      LOOPING TYPING ANIMATION
   ============================ */
@@ -109,29 +111,29 @@
 
   function typeLoop() {
     if (!deleting && i < text.length) {
-      typingEl.innerHTML += text.charAt(i);
+      typingEl.textContent += text.charAt(i);
       i++;
-      setTimeout(typeLoop, 80);
+      setTimeout(typeLoop, 75);
     } else if (i === text.length && !deleting) {
       deleting = true;
-      setTimeout(typeLoop, 1500); // pause before deleting
+      setTimeout(typeLoop, 1500);
     } else if (deleting && i > 0) {
-      typingEl.innerHTML = text.substring(0, i - 1);
+      typingEl.textContent = text.substring(0, i - 1);
       i--;
       setTimeout(typeLoop, 40);
     } else if (deleting && i === 0) {
       deleting = false;
-      setTimeout(typeLoop, 600); // pause before retyping
+      setTimeout(typeLoop, 600);
     }
   }
 
-  window.onload = typeLoop;
+  // run typing after a short delay so animations initialize first
+  setTimeout(typeLoop, 300);
 
 
 
   /* ============================
-     SCROLL ANIMATIONS
-     (retrigger every time)
+     SCROLL ANIMATIONS (RETRIGGER)
   ============================ */
   const sections = document.querySelectorAll("main section");
 
@@ -139,23 +141,38 @@
     (entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          // alternate direction left/right
+          // add animation classes when in view
           entry.target.classList.add(
             "visible",
             index % 2 === 0 ? "fade-left" : "fade-right",
             "bounce"
           );
+
+          // for each sneak item inside, stagger a bit
+          const items = entry.target.querySelectorAll(".sneak-item");
+          items.forEach((item, idx) => {
+            item.style.transitionDelay = `${idx * 0.15}s`;
+            item.classList.add("visible");
+          });
         } else {
-          // remove visibility when leaving viewport (so it can replay)
+          // reset when leaving viewport
           entry.target.classList.remove("visible", "bounce");
+          const items = entry.target.querySelectorAll(".sneak-item");
+          items.forEach((item) => {
+            item.classList.remove("visible");
+            item.style.transitionDelay = "0s";
+          });
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.2 }
   );
 
   sections.forEach((section) => observer.observe(section));
+
+});
 </script>
+
 
 
 

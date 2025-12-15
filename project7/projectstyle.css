@@ -623,3 +623,76 @@ section:not(.visible) {
     transform: translateY(40px);
   }
 }
+
+/* --- SCROLL ANIMATION BASE STYLES --- */
+section, .sneak-item {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+section.visible, .sneak-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* alternating directions */
+section.fade-left { transform: translateX(-80px); }
+section.fade-right { transform: translateX(80px); }
+section.fade-left.visible, section.fade-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* bounce pop */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.95) translateY(40px); }
+  60%  { opacity: 1; transform: scale(1.02) translateY(-10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+section.bounce { animation: bounceIn 0.9s ease forwards; }
+
+section:not(.visible) {
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+/* === UNIVERSAL SCROLL-IN ANIMATIONS === */
+section, img, video, article {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* left/right alternation for sections */
+section.fade-left { transform: translateX(-80px); }
+section.fade-right { transform: translateX(80px); }
+section.fade-left.visible, section.fade-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* slight bounce for energy */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.95) translateY(40px); }
+  60%  { opacity: 1; transform: scale(1.02) translateY(-10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.bounce { animation: bounceIn 0.9s ease forwards; }
+
+.photo-grid img {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.photo-grid img.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
