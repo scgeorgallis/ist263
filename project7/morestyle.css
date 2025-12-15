@@ -1,0 +1,253 @@
+/* =========================================================
+   GLOBAL BASE
+========================================================= */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #000;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: #000;
+  margin: 0;
+}
+
+p { font-family: "Work Sans", sans-serif; }
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+nav {
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  text-align: right;
+  padding: 15px 6%;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 25px;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover { opacity: 0.6; }
+
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+  width: 90%;
+  max-width: 1100px;
+  margin: 60px auto;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+  padding: 40px;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+header h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   INSPIRATION GRID
+========================================================= */
+.inspiration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  width: 90%;
+  margin: 60px auto 100px;
+}
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.tile img,
+.tile video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* handle HEIC gracefully (won’t break layout) */
+.tile img[alt*=".HEIC"] {
+  background-color: #f5f5f5;
+}
+
+/* =========================================================
+   RESUME SECTION
+========================================================= */
+.resume {
+  width: 88%;
+  max-width: 1000px;
+  margin: 100px auto 120px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.resume.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resume h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.resume p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.resume a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+}
+
+.resume a:hover { opacity: 0.6; }
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer {
+  width: 88%;
+  margin: 80px auto 40px;
+  font-family: "Work Sans", sans-serif;
+  color: #111;
+  text-align: center;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #000;
+  margin-bottom: 30px;
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 6px 0;
+}
+
+footer a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  border-bottom: 1px solid #000;
+  opacity: 0.7;
+}
+
+footer h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+footer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin: 0 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer img:hover {
+  transform: translateY(-5px) scale(1.05);
+  filter: brightness(1.2);
+}
+
+footer .tagline {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: #333;
+}
+
+footer .copyright {
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 8px;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(60px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* universal scroll-in */
+section, .tile {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+section.visible, .tile.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 900px) {
+  header { padding: 30px 20px; }
+  header h2 { font-size: 1.2rem; }
+  .resume h3 { font-size: 2rem; }
+  .resume p { font-size: 0.85rem; }
+  .inspiration-grid { gap: 10px; }
+}
