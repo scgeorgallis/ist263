@@ -9,63 +9,89 @@
 </head>
 
 <body>
-    <nav>
-        <a href="portfolio.html">PORTFOLIO</a> | 
-        <a href="more.html ">MORE</a>
-    </nav>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="portfolio.html">PORTFOLIO</a>
+        <a href="more.html">MORE</a>
+      </div>
+    </div>
+  </nav>
 
-    <header>
-        <video src="../project-images/header-video.mov" autoplay muted loop></video>
-        <img src="../project-images/header-image.JPG" alt="Header Image" width="200" height="400">
-        <h1>SOFIA GEORGALLIS</h1>
-        <h2>CREATIVE. PASSIONATE. CURIOUS.</h2>
-        <p>I'm a junior at Syracuse University studying Innovation, Society, and Technology with a focus in Digital Retail Strategies. This site is my creative portfolio, a space where I share the projects I love most.</p>
-        <p>I’ve styled for campus magazines, designed for student films, and worked in live music and event production both at school and in Los Angeles. My work spans styling, photography, design, and creative and art direction in all aspects, always centered on strong visuals and storytelling.</p>
-        <p>This portfolio is a mix of what inspires me and what I create!</p>
-    </header>
+  <!-- Header / Hero Section -->
+  <header class="home-header">
+    <div class="hero-media">
+      <video src="../project-images/header-video.mov" autoplay muted loop></video>
+      <img src="../project-images/header-image.JPG" alt="Header Image">
+    </div>
 
-    <main>
-        <section> 
-            <h2>SNEAK PEEK</h2>
-            <article>
-                <h3><a href="portfolio.html">PORTFOLIO</a></h3>
-                <img src="../project-images/sneakpeek-portfolio.png" alt="Sneak Peek Portoflio Image" width="200" height="200">
-                <p>A curated collection of my work in styling, photography, design, and video. Organized into galleries that showcase my projects, inspirations, and creative direction.</p>   
-            </article>
-            <article>
-                <h3><a href="about.html">MORE..</a></h3>
-                <img src="../project-images/sneakpeek-contactme.png" alt="Sneak Peek More Image" width="200" height="200">
-                <p>A closer look into who I am, what inspires me, and the experiences that shape my work.</p>
-            </article>
-        </section>
-    </main>
+    <div class="hero-text">
+      <h1>SOFIA GEORGALLIS</h1>
+      <h2><em>CREATIVE. PASSIONATE. CURIOUS.</em></h2>
+      <p>
+        I'm a junior at Syracuse University studying Innovation, Society, and Technology with a focus in Digital Retail Strategies.
+        This site is my creative portfolio, a space where I share the projects I love most. I’ve styled for campus magazines,
+        designed for student films, and worked in live music and event production both at school and in Los Angeles.
+        My work spans styling, photography, design, and creative and art direction in all aspects, always centered on strong visuals
+        and storytelling. This portfolio is a mix of what inspires me and what I create!
+      </p>
+    </div>
+  </header>
 
-    <footer>
-        <hr>
-            <p><strong>School Email:</strong> scgeorga@syr.edu | <strong>Personal Email:</strong> sofiaageorgallis@gmail.com</p>
-            <p><strong>Linkedin:</strong>
-                <a href="https://www.linkedin.com/in/sofia-georgallis/">https://www.linkedin.com/in/sofia-georgallis/</a>
-            </p>
-            <p><strong>Instagram:</strong> @sofia.georgallis</p>
+  <!-- Sneak Peek Section -->
+  <main>
+    <section class="sneakpeek-section">
+      <h2>SNEAK PEEK</h2>
+      <div class="sneakpeek-grid">
+        <div class="sneak-item">
+          <a href="portfolio.html">
+            <img src="../project-images/sneakpeek-portfolio.png" alt="Sneak Peek Portfolio">
+          </a>
+          <h3>PORTFOLIO</h3>
+          <p>A curated collection of my work in styling, photography, design, and video.</p>
+        </div>
+        <div class="sneak-item">
+          <a href="more.html">
+            <img src="../project-images/sneakpeek-contactme.png" alt="Sneak Peek More">
+          </a>
+          <h3>MORE...</h3>
+          <p>A closer look into who I am, what inspires me, and the experiences that shape my work.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <section>
-                <h3>FOR FUN!</h3>
-                <p>
-                    <a href="https://pin.it/48FWTzv5J" target="_blank">
-                        <img src="../project-images/pinterest-logo.png" alt="Pinterest Icon" width="40" height="40">
-                    </a>
-                    <a href="https://open.spotify.com/user/scg_swim0405?si=25ab663302974f62" target="_blank">
-                        <img src="../project-images/spotify-logo.jpeg" alt="Spotify Icon" width="40" height="40">
-                    </a> 
-                </p>
-            </section>
+  <!-- Footer -->
+  <footer class="portfolio-footer">
+    <hr>
+    <div class="footer-layout">
+      <div class="footer-info">
+        <p><strong>SCHOOL EMAIL:</strong> scgeorga@syr.edu</p>
+        <p><strong>PERSONAL EMAIL:</strong> sofiaageorgallis@gmail.com</p>
+        <p><strong>LINKEDIN:</strong>
+          <a href="https://www.linkedin.com/in/sofia-georgallis/" target="_blank">LinkedIn</a>
+        </p>
+        <p><strong>INSTAGRAM:</strong> @sofia.georgallis</p>
+      </div>
 
-            <p class="tagline">"CREATIVE. PASSIONATE. CURIOUS."</p>
-            <p class="copyright">&copy; 2025 Sofia Georgallis  &trade;</p>
-            <div class="clear"></div>
-    </footer>
-
+      <div class="footer-fun">
+        <h3>FOR FUN!</h3>
+        <div class="social-icons">
+          <a href="https://pin.it/48FWTzv5J" target="_blank">
+            <img src="../project-images/pinterest-logo.png" alt="Pinterest Icon">
+          </a>
+          <a href="https://open.spotify.com/user/scg_swim0405?si=25ab663302974f62" target="_blank">
+            <img src="../project-images/spotify-logo.jpeg" alt="Spotify Icon">
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="tagline">"CREATIVE. PASSIONATE. CURIOUS."</p>
+    <p class="copyright">&copy; 2025 Sofia Georgallis &trade;</p>
+  </footer>
 </body>
+
 
 </html>
 
