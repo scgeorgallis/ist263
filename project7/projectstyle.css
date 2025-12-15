@@ -24,7 +24,7 @@ p { font-family: "Work Sans", sans-serif; }
   width: 100%;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
   transition: background-color 0.3s ease, border-bottom 0.3s ease;
 }
 
@@ -53,46 +53,90 @@ p { font-family: "Work Sans", sans-serif; }
 
 /* === HOMEPAGE HEADER === */
 .home-header {
-  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
 }
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
 .hero-media video,
 .hero-media img {
-  width: 100%;
-  height: auto;
+  flex: 1 1 50%;
+  height: 85vh;
   object-fit: cover;
   display: block;
 }
+
+/* --- HEADER TEXT --- */
 .hero-text {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+  text-align: center;
+  margin-top: 30px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .hero-text h1 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
-  font-size: 6rem;
+  font-size: clamp(3rem, 8vw, 8rem);
   letter-spacing: 2px;
-  margin-bottom: 0.2rem;
   text-transform: uppercase;
-  transition: text-shadow 0.4s ease;
+  margin-bottom: 0.5rem;
+  line-height: 1;
 }
-.hero-text h1:hover {
-  text-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
+
 .hero-text h2 {
   font-family: "Playfair Display", serif;
   font-style: italic;
+  font-weight: 400;
   font-size: 1.5rem;
   color: #333;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
+
 .hero-text p {
+  font-family: "Work Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1.5;
   color: #111;
   max-width: 700px;
   margin: 0 auto;
 }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .hero-media {
+    flex-direction: column;
+  }
+  .hero-media video,
+  .hero-media img {
+    height: auto;
+  }
+  .hero-text h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+}
+
+#typing::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+  margin-left: 4px;
+  color: #000;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
 
 /* === HOMEPAGE: SNEAK PEEK SECTION === */
 .sneakpeek-section {
