@@ -5,34 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sofia Georgallis | Home</title>
-   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="projectstyle.css">
 </head>
-
-<script>
-  const text = "CREATIVE. PASSIONATE. CURIOUS.";
-  let i = 0;
-  function type() {
-    if (i < text.length) {
-      document.getElementById("typing").innerHTML += text.charAt(i);
-      i++;
-      setTimeout(type, 80);
-    }
-  }
-  window.onload = type;
-</script>
-
-<script>
-  window.addEventListener("scroll", () => {
-    const nav = document.querySelector(".main-nav");
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-</script>
 
 <body>
   <nav class="main-nav">
@@ -74,6 +50,7 @@
           <h3>PORTFOLIO</h3>
           <p>A curated collection of my work in styling, photography, design, and video.</p>
         </div>
+
         <div class="sneak-item">
           <a href="more.html">
             <img src="../project-images/sneakpeek-contactme.png" alt="Sneak Peek More">
@@ -86,43 +63,65 @@
   </main>
 
   
-  <footer class="homepage-footer">
-  <hr>
-  <div class="footer-layout">
-    <div class="footer-info">
-        <p><strong>SCHOOL EMAIL:</strong> 
-            <a href="mailto:scgeorga@syr.edu">scgeorga@syr.edu</a>
-        </p>
-        <p><strong>PERSONAL EMAIL:</strong> 
-            <a href="mailto:sofiaageorgallis@gmail.com">sofiaageorgallis@gmail.com</a>
-        </p>
-        <p><strong>LINKEDIN:</strong> 
-            <a href="https://www.linkedin.com/in/sofia-georgallis/" target="_blank">@sofia-georgallis</a>
-        </p>
-        <p><strong>INSTAGRAM:</strong> 
-            <a href="https://www.instagram.com/sofia.georgallis/" target="_blank">@sofia.georgallis</a>
-        </p>
+    <footer class="homepage-footer">
+        <hr>
+        <div class="footer-layout">
+            <div class="footer-info">
+                <p><strong>SCHOOL EMAIL:</strong> 
+                    <a href="mailto:scgeorga@syr.edu">scgeorga@syr.edu</a>
+                </p>
+                <p><strong>PERSONAL EMAIL:</strong> 
+                    <a href="mailto:sofiaageorgallis@gmail.com">sofiaageorgallis@gmail.com</a>
+                </p>
+                <p><strong>LINKEDIN:</strong> 
+                    <a href="https://www.linkedin.com/in/sofia-georgallis/" target="_blank">@sofia-georgallis</a>
+                </p>
+                <p><strong>INSTAGRAM:</strong> 
+                    <a href="https://www.instagram.com/sofia.georgallis/" target="_blank">@sofia.georgallis</a>
+                </p>
+            </div>
+
+            <div class="footer-fun">
+                <h3>FOR FUN!</h3>
+                <div class="social-icons">
+                    <a href="https://pin.it/48FWTzv5J" target="_blank">
+                    <img src="../project-images/pinterest-logo.png" alt="Pinterest Icon">
+                    </a>
+                    <a href="https://open.spotify.com/user/scg_swim0405?si=25ab663302974f62" target="_blank">
+                    <img src="../project-images/spotify-logo.jpeg" alt="Spotify Icon">
+                    </a>
+                </div>
+            </div>
         </div>
 
-    <div class="footer-fun">
-      <h3>FOR FUN!</h3>
-      <div class="social-icons">
-        <a href="https://pin.it/48FWTzv5J" target="_blank">
-          <img src="../project-images/pinterest-logo.png" alt="Pinterest Icon">
-        </a>
-        <a href="https://open.spotify.com/user/scg_swim0405?si=25ab663302974f62" target="_blank">
-          <img src="../project-images/spotify-logo.jpeg" alt="Spotify Icon">
-        </a>
-      </div>
-    </div>
-  </div>
+        <p class="tagline">"CREATIVE. PASSIONATE. CURIOUS."</p>
+        <p class="copyright">&copy; 2025 Sofia Georgallis &trade;</p>
+    </footer>
 
-  <p class="tagline">"CREATIVE. PASSIONATE. CURIOUS."</p>
-  <p class="copyright">&copy; 2025 Sofia Georgallis &trade;</p>
-</footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const text = "CREATIVE. PASSIONATE. CURIOUS.";
+        let i = 0;
+        const typing = document.getElementById("typing");
+        function type() {
+            if (i < text.length) {
+            typing.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, 80);
+            }
+        }
+        type();
+        });
 
+        window.addEventListener("scroll", () => {
+        const nav = document.querySelector(".main-nav");
+        if (window.scrollY > 50) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+        });
+    </script>
 </body>
-
-
 </html>
 

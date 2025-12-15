@@ -1,622 +1,23 @@
+/* === GLOBAL BASE === */
 html, body {
-  background-color: #ffffff; 
-  color: #000;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding:0;} 
-
-/* HOMEPAGE TYPOGRAPHY + STRUCTURE */
-body {
-  font-family: "Work Sans", sans-serif;
-  background-color: #fff;
-  color: #000;
   margin: 0;
   padding: 0;
+  width: 100%;
   overflow-x: hidden;
-}
-
-/* NAV BAR (same font as portfolio nav) */
-body nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 15px 6%;
   background-color: #fff;
-  border-bottom: 1px solid #000;
-}
-
-body nav a {
-  font-family: "Playfair Display", serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-decoration: none;
   color: #000;
-  letter-spacing: 0.5px;
-  transition: opacity 0.3s ease;
+  font-family: "Work Sans", sans-serif;
 }
 
-body nav a:hover {
-  opacity: 0.6;
-}
-
-/* HEADER */
-header h1 {
+/* === GLOBAL TYPOGRAPHY === */
+h1, h2, h3 {
   font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 6rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  margin: 1rem 0 0.3rem;
+  color: #000;
+  margin: 0;
 }
+p { font-family: "Work Sans", sans-serif; }
 
-header h2 {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.4rem;
-  text-align: center;
-  color: #333;
-  margin-bottom: 2rem;
-}
-
-header p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #111;
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 1rem;
-}
-
-/* SECTION HEADERS (Sneak Peek titles etc.) */
-section h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 3rem;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 1px;
-  margin-bottom: 1.2rem;
-}
-
-section h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-}
-
-/* BODY TEXT */
-section p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  text-align: center;
-  color: #111;
-  max-width: 700px;
-  margin: 0 auto 1rem;
-}
-
-
-.portfolio-page {
-  font-family: "Work Sans", Arial, sans-serif; 
-  color: #000; 
-  background: #fff; 
-  line-height: 1.6;}
-
-.portfolio-page h1, .portfolio-page h2, .portfolio-page h3 {
-  font-family: "Playfair Display", serif; 
-  font-weight: 700; 
-  letter-spacing: 0.3px;}
-
-/*NAVIGATION*/
-.portfolio-page nav {
-  display: flex; 
-  justify-content: flex-end; 
-  align-items: right; 
-  gap: 1rem; 
-  margin: 10px 6% 20px;}
-
-.portfolio-page nav a {
-  color: #000; 
-  font-family: "Playfair Display", serif; 
-  font-weight: 700; font-size: 1.5rem; 
-  text-decoration: none; 
-  letter-spacing: 0.5px; 
-  transition: opacity 0.3s ease; 
-  cursor: pointer;}
-
-.portfolio-page nav a:hover {opacity: 0.6;}
-
-/*HEADER SECTION*/
-.portfolio-page header {
-  width: 100%; 
-  margin: 0 auto 60px; 
-  text-align: center;}
-
-.portfolio-page header video {
-  width: 100%; 
-  height: auto; 
-  border: solid #000; 
-  border-radius: 1px; 
-  padding: 0; 
-  box-sizing: border-box; 
-  display: block; 
-  margin: 0 auto 15px;}
-
-.portfolio-page header p { 
-  font-family: "Work Sans", Arial, sans-serif; 
-  font-style: italic; 
-  font-size: 0.75rem; 
-  color: #333; 
-  text-align: center;
-  max-width: 700px; 
-  margin: 0 auto; 
-  line-height: 1;}
-
-/* STYLING + MOOD BOARDS SECTION */
-.portfolio-page .styling-section {
-  width: 88%;
-  margin: 0 auto 80px;
-  text-align: center;}
-
-/*title header*/
-.portfolio-page .styling-section h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  line-height: 1;
-  margin: 0 0 0.6rem;}
-
-/*title subtitle*/
-.portfolio-page .styling-section > p {
-  font-family: "Work Sans", sans-serif; 
-  font-style: italic;
-  font-size: .75rem;
-  color: #333;
-  margin: 0 auto 2.5rem;
-  max-width: 700px;
-  line-height: 1;}
-
-/*grid*/
-.portfolio-page .styling-section .projects {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 50px;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow-x: hidden;}
-
-/*blocks*/
-.portfolio-page .styling-section .projects article {
-  flex: 1 1 45%;
-  max-width: 500px;
-  text-align: left;
-  margin: 0;}
-
-/*subheadings and text*/
-.portfolio-page .styling-section .projects article h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  margin-bottom: 0.3rem;
-  white-space: nowrap;}
-
-.portfolio-page .styling-section .projects article p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.85rem;
-  line-height: 1.1;
-  margin-bottom: 0.5rem;}
-
-header video,
-header img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  object-fit: cover;
-}
-
-  
-
-/*images*/
-.portfolio-page .styling-section .projects article img {
-  display: block;
-  margin: 0.5rem auto 0;
-  border: none;
-  max-width: 100%;
-  height: auto;}
-
-/*response stuff*/
-@media (max-width: 900px) {
-  .portfolio-page .styling-section .projects {
-    flex-direction: column;
-    align-items: center;}
-
-  .portfolio-page .styling-section .projects article{
-    text-align: center;}
-  
-  .portfolio-page .styling-section .projects article p {
-    max-width: 100%;}
-}
-
-/* PHOTOGRAPHY SECTION */
-.portfolio-page .photography-section {
-  width: 88%;
-  margin: 0 auto 100px;
-  text-align: center;}
-
-/* title header */
-.portfolio-page .photography-section h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  line-height: 1;
-  margin-bottom: 0.6rem;}
-
-/* subtitle */
-.portfolio-page .photography-section > p {
-  font-family: "Work Sans", sans-serif;
-  font-style: italic;
-  font-size: 0.75rem;
-  color: #333;
-  margin: 0 auto 2.5rem;
-  max-width: 700px;
-  line-height: 1;}
-
-/* grid layout */
-.portfolio-page .photography-section .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 250px;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto 2rem;
-  max-width: 1100px;}
-
-.portfolio-page .photography-section .photo-grid img{
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  border:none;
-  display:block;}
-
-/* bottom text layout */
-.portfolio-page .photography-section .info-grid {
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  max-width: 900px;
-  margin: 2rem auto 0;
-  text-align: left;}
-
-  .portfolio-page .photography-section .info-grid h3,
-  .portfolio-page .photography-section .under-info h3 {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 700;
-    font-size: 2.4rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    line-height: 1;
-    margin-bottom: 0.3rem;}
-  
-  .portfolio-page .photography-section .info-grid p,
-  .portfolio-page .photography-section .under-info p{
-    font-family: "Work Sans", sans-serif;
-    font-size: 0.85rem;
-    line-height: 1.1;
-    color:#111;
-    margin-bottom: 0.5rem;}
-
-/* below grid */
-.portfolio-page .photography-section .under-info {
-  text-align: center;
-  margin-top: 3rem;}
-
-/*responsive stuff*/
-@media (max-width: 900px){
-  .portfolio-page .photography-section .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 180px;}
-  
-  .portfolio-page .portfolio-section .info-grid {
-    grid-template-columns: 1fr;
-    text-align: center;}
-}
-
-/* GRAPHIC DESIGN SECTION */
-.portfolio-page .graphic-section {
-  width: 88%;
-  margin: 40px auto 100px;
-  text-align: center;}
-
-/* Title and subtitle */
-.portfolio-page .graphic-section h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  line-height: 1;
-  margin-bottom: 0.4rem;}
-
-.portfolio-page .graphic-section > p {
-  font-family: "Work Sans", sans-serif;
-  font-style: italic;
-  font-size: 0.75rem;
-  color: #333;
-  margin: 0 auto 2rem;
-  max-width: 700px;
-  line-height: 1;}
-
-/* Layout*/
-.portfolio-page .graphic-section .design-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  margin: 0 auto;
-  max-width: 1100px;
-  text-align: center;}
-
-.portfolio-page .graphic-section .leftside-info {
-  text-align: left;
-  align-self: flex-start;
-  max-width: 400px;
-  margin-left: 8%;}
-
-.portfolio-page .graphic-section .leftside-info h3{
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  margin-bottom: 0.3rem;}
-
-.portfolio-page .graphic-section .leftside-info p{
-  font-family:"Work Sans", sans-serif;
-  font-size: .85rem;
-  line-height: 1.2;
-  color:#111;
-  margin:0;}
-
-.portfolio-page .graphic-section .design-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: nowrap;
-  width: 100%;}
-
-.portfolio-page .graphic-section .design-grid img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border: none;}
-
-.portfolio-page .graphic-section .right-info {
-  text-align: right;
-  align-self: flex-end;
-  max-width: 400px;
-  margin-right: 8%;}
-
-.portfolio-page .graphic-section .right-info p{
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.85rem;
-  line-height: 1.2;
-  color:#111;
-  margin: 0;}
-
-/* Responsive stuff */
-@media (max-width: 900px) {
-  .portfolio-page .graphic-section .design-info {
-    text-align: center;
-    align-items: center;}
-
-  .portfolio-page .graphic-section .leftside-info,
-  .portfolio-page .graphic-section .right-info {
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: center;}
-
-  .portfolio-page .graphic-section .design-grid {
-    flex-wrap: wrap;}
-}
-
-/* VIDEO SECTION */
-.portfolio-page .video-section {
-  width: 88%;
-  margin: 0 auto 120px;
-  text-align: center;}
-
-/* Title + Subtitle */
-.portfolio-page .video-section h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: .5px;
-  margin-bottom: 0.5rem;}
-
-.portfolio-page .video-section .video-intro {
-  font-family: "Work Sans", sans-serif;
-  font-style: italic;
-  font-size: 0.8rem;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  line-height: 1.2;}
-
-/* Collage layout */
-.portfolio-page .video-section .video-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-  max-width: 1100px;
-  margin: 0 auto;}
-
-.portfolio-page .video-section .video-grid video {
-  width: 240px;
-  height: 150px;
-  object-fit: cover;
-  border: 2px solid #000;
-  border-radius: 3px;
-  transition: transform 0.3s ease;}
-
-.portfolio-page .video-section .video-grid video:nth-child(odd) {
-  transform: translateY(10px) rotate(-2deg);}
-
-.portfolio-page .video-section .video-grid video:nth-child(even) {
-  transform: translateY(-10px) rotate(2deg);}
-
-.portfolio-page .video-section .video-grid video:hover {
-  transform: scale(1.03);}
-
-/* subtext */
-.portfolio-page .video-section .video-subtext {
-  font-family: "Work Sans", sans-serif;
-  font-style: italic;
-  font-size: 0.8rem;
-  color: #333;
-  margin-top: 1.5rem;
-  line-height: 1.3;}
-
-/* Responsive stuff */
-@media (max-width: 900px) {
-  .portfolio-page .video-section .video-grid {
-    gap: 15px;}
-  .portfolio-page .video-section .video-grid video {
-    width: 180px;
-    height: 110px;}
-}
-
-/* FOOTER */
-.portfolio-page .portfolio-footer {
-  width: 88%;
-  margin: 80px auto 40px;
-  font-family: "Work Sans", sans-serif;
-  color: #111;}
-
-.portfolio-page .portfolio-footer hr {
-  border: none;
-  border-top: 1px solid #000;
-  margin-bottom: 30px;}
-
-.portfolio-page .portfolio-footer .footer-layout {
-  display:flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  text-align: left;}
-
-/*link fixes*/
-.portfolio-page .portfolio-footer .footer-info {
-  flex: 1;
-  min-width: 280px;}
-
-.portfolio-page .portfolio-footer .footer-info p{
-  font-size: .85rem;
-  line-height: 1.5;
-  margin: 5px 0;}
-
-.portfolio-page .portfolio-footer .footer-info strong{
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  letter-spacing: 0.5px;}
-
-.portfolio-page .portfolio-footer a {
-  color:#000;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;}
-
-.portfolio-page .portfolio-footer a:hover{
-  border-bottom: 1px solid #000;
-  opacity: 0.7;}
-
-/*for fun*/
-.portfolio-page .portfolio-footer .footer-fun {
-  flex: 0 0 auto;
-  text-align: right;
-  min-width: 220px;}
-
-.portfolio-page .portfolio-footer .footer-fun h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 10px;
-  margin-bottom: 0.5px;}
-
-.portfolio-page .portfolio-footer .social-icons {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;}
-
-.portfolio-page .portfolio-footer .social-icons img {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-  transition: transform 0.3s ease;}
-
-.portfolio-page .portfolio-footer .social-icons img:hover {
-  transform: scale(1.1);}
-
-/*tagline and copyright*/
-.portfolio-page .portfolio-footer .tagline {
-  text-align: center;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  margin-top: 40px;
-  color: #333;}
-
-.portfolio-page .portfolio-footer .copyright {
-  text-align: center;
-  font-size: 0.7rem;
-  color: #444;
-  margin-top: 8px;}
-
-/* Responsive stuff*/
-@media (max-width: 900px) {
-  .portfolio-page .portfolio-footer .portfolio-layout {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;}
-  
-  .portfolio-page .portfolio-footer .footer-fun {
-    text-align: center;
-    margin-top: 20px;}
-  
-  .portfolio-page .portfolio-footer .social-icons {
-    justify-content: center;}
-}
-
-
-
-/* Navigation */
+/* === NAVIGATION (shared across all pages) === */
 .main-nav {
   background-color: #fff;
   border-bottom: 1px solid #000;
@@ -624,12 +25,18 @@ header img {
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.main-nav.scrolled {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #aaa;
 }
 
 .nav-container {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 5%;
+  padding: 15px 6%;
 }
 
 .nav-links a {
@@ -637,52 +44,49 @@ header img {
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   letter-spacing: 0.5px;
-  margin-left: 20px;
+  margin-left: 25px;
   transition: opacity 0.3s ease;
 }
 .nav-links a:hover { opacity: 0.6; }
 
+/* === HOMEPAGE HEADER === */
 .home-header {
-  position: relative;
   text-align: center;
-  width: 100%;
-  overflow: hidden;
 }
-
 .hero-media video,
 .hero-media img {
   width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
+  display: block;
 }
-
 .hero-text {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
-
 .hero-text h1 {
   font-family: "Playfair Display", serif;
-  font-size: 6rem;
   font-weight: 800;
+  font-size: 6rem;
   letter-spacing: 2px;
   margin-bottom: 0.2rem;
+  text-transform: uppercase;
+  transition: text-shadow 0.4s ease;
 }
-
+.hero-text h1:hover {
+  text-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
 .hero-text h2 {
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
   color: #333;
+  margin-bottom: 1.5rem;
 }
-
 .hero-text p {
-  font-family: "Work Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1.5;
   color: #111;
@@ -690,34 +94,28 @@ header img {
   margin: 0 auto;
 }
 
+/* === HOMEPAGE: SNEAK PEEK SECTION === */
 .sneakpeek-section {
   width: 90%;
   margin: 100px auto;
   text-align: center;
 }
-
 .sneakpeek-section h2 {
-  font-family: "Playfair Display", serif;
   font-weight: 800;
   font-size: 3rem;
-  letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
-
 .sneakpeek-grid {
   display: flex;
   justify-content: center;
-  align-items: stretch;
   flex-wrap: wrap;
   gap: 50px;
 }
-
 .sneak-item {
   flex: 1 1 45%;
   text-align: center;
 }
-
 .sneak-item img {
   width: 100%;
   height: 400px;
@@ -726,85 +124,72 @@ header img {
   border-radius: 3px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .sneak-item img:hover {
   transform: scale(1.03);
   opacity: 0.9;
 }
-
 .sneak-item h3 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
   margin: 10px 0 5px;
 }
-
 .sneak-item p {
-  font-family: "Work Sans", sans-serif;
   font-size: 0.9rem;
   color: #333;
 }
 
-@media (max-width: 900px) {
-  .hero-text h1 {
-    font-size: 3.5rem;
-  }
-  .hero-text h2 {
-    font-size: 1.1rem;
-  }
-  .sneakpeek-grid {
-    flex-direction: column;
-  }
-  .sneak-item img {
-    height: 250px;
-  }
-}
-
-.homepage-footer {
+/* === FOOTER (shared across all pages) === */
+footer {
   width: 88%;
   margin: 80px auto 40px;
   font-family: "Work Sans", sans-serif;
   color: #111;
 }
-
-.homepage-footer hr {
+footer hr {
   border: none;
   border-top: 1px solid #000;
   margin-bottom: 30px;
 }
-
-.homepage-footer .footer-layout {
+.footer-layout {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 40px;
 }
-
-.homepage-footer .footer-info {
+.footer-info {
   text-align: left;
   flex: 1;
 }
-
-.homepage-footer .footer-info p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 5px 0;
-}
-
-.homepage-footer .footer-info strong {
+.footer-info strong {
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-size: 1.1rem;
 }
+.footer-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+.footer-info a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.footer-info a:hover {
+  border-bottom: 1px solid #000;
+  opacity: 0.7;
+}
 
-.homepage-footer .footer-fun {
+/* right side */
+.footer-fun {
   text-align: right;
   flex: 0 0 auto;
 }
-
-.homepage-footer .footer-fun h3 {
+.footer-fun h3 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -812,62 +197,15 @@ header img {
   letter-spacing: 6px;
   margin-bottom: 10px;
 }
-
-.homepage-footer .social-icons {
+.social-icons {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
 }
-
-.homepage-footer .social-icons img {
+.social-icons img {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.homepage-footer .social-icons img:hover {
-  transform: scale(1.1);
-}
-
-.homepage-footer .tagline {
-  text-align: center;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 0.9rem;
-  margin-top: 40px;
-  color: #333;
-}
-
-.homepage-footer .copyright {
-  text-align: center;
-  font-size: 0.7rem;
-  color: #444;
-  margin-top: 8px;
-}
-
-.homepage-footer .footer-info a {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.homepage-footer .footer-info a:hover {
-  border-bottom: 1px solid #000;
-  opacity: 0.7;
-}
-
-
-
-.hero-text h1 {
-  transition: text-shadow 0.4s ease;
-}
-.hero-text h1:hover {
-  text-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
-
-.social-icons img {
+  border-radius: 4px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 .social-icons img:hover {
@@ -875,10 +213,36 @@ header img {
   filter: brightness(1.2);
 }
 
-.main-nav {
-  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+footer .tagline {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: #333;
 }
-.main-nav.scrolled {
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #aaa;
+footer .copyright {
+  text-align: center;
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 8px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .hero-text h1 { font-size: 3.5rem; }
+  .hero-text h2 { font-size: 1.1rem; }
+  .sneakpeek-grid { flex-direction: column; }
+  .sneak-item img { height: 250px; }
+
+  .footer-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-fun {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .social-icons { justify-content: center; }
 }
