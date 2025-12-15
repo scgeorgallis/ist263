@@ -164,18 +164,17 @@ document.addEventListener("DOMContentLoaded", () => {
             index % 2 === 0 ? "fade-left" : "fade-right",
             "bounce"
           );
-
-          const inner = entry.target.querySelectorAll("img, video, article");
-          inner.forEach((el, idx) => {
-            el.style.transitionDelay = `${idx * 0.12}s`;
-            el.classList.add("visible");
+          const innerItems = entry.target.querySelectorAll("img, video, article");
+          innerItems.forEach((item, idx) => {
+            item.style.transitionDelay = `${idx * 0.12}s`;
+            item.classList.add("visible");
           });
         } else {
           entry.target.classList.remove("visible", "bounce");
-          const inner = entry.target.querySelectorAll("img, video, article");
-          inner.forEach((el) => {
-            el.classList.remove("visible");
-            el.style.transitionDelay = "0s";
+          const innerItems = entry.target.querySelectorAll("img, video, article");
+          innerItems.forEach((item) => {
+            item.classList.remove("visible");
+            item.style.transitionDelay = "0s";
           });
         }
       });
@@ -186,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sections.forEach((section) => observer.observe(section));
 });
 </script>
+
 
 
 
