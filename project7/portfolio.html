@@ -11,15 +11,22 @@
 </head>
 
 <body class="portfolio-page">
-    <nav>
+    <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-links">
         <a href="homepage.html">HOME</a>  
         <a href="more.html ">MORE</a>
+      </div>
+    </div>
     </nav>
 
-    <header>
-        <video src="../project-images/portfolio-header.mov" autoplay muted loop></video>
-        <p>Scroll for a curated collection of my projects across styling, photography, graphic design, and video. Each section highlights a different part of my creativity, designed to be explored visually. </p>
+    <header class="portfolio-header">
+        <div class="hero-media"></div>
+            <video src="../project-images/portfolio-header.mov" autoplay muted loop></video>
+            <p>Scroll for a curated collection of my projects across styling, photography, graphic design, and video. Each section highlights a different part of my creativity, designed to be explored visually. </p>
+        </div>
     </header>
+
 
      <main>
         <section class="styling-section">
@@ -108,76 +115,79 @@
         </section>
      </main>
 
+
     <footer class="portfolio-footer">
         <hr>
         <div class="footer-layout">
             <div class="footer-info">
-                <p><strong>SCHOOL EMAIL:</strong> scgeorga@syr.edu</p>
-                <p><strong>PERSONAL EMAIL:</strong> sofiaageorgallis@gmail.com</p>
-                <p><strong>LINKEDIN:</strong>
-                    <a href="https://www.linkedin.com/in/sofia-georgallis/" target="_blank">https://www.linkedin.com/in/sofia-georgallis/</a>
+                <p><strong>SCHOOL EMAIL:</strong> 
+                    <a href="mailto:scgeorga@syr.edu">scgeorga@syr.edu</a>
                 </p>
-                <p><strong>INSTAGRAM:</strong> @sofia.georgallis</p>
+                <p><strong>PERSONAL EMAIL:</strong> 
+                    <a href="mailto:sofiaageorgallis@gmail.com">sofiaageorgallis@gmail.com</a>
+                </p>
+                <p><strong>LINKEDIN:</strong> 
+                    <a href="https://www.linkedin.com/in/sofia-georgallis/" target="_blank">@sofia-georgallis</a>
+                </p>
+                <p><strong>INSTAGRAM:</strong> 
+                    <a href="https://www.instagram.com/sofia.georgallis/" target="_blank">@sofia.georgallis</a>
+                </p>
             </div>
-            
+
             <div class="footer-fun">
                 <h3>FOR FUN!</h3>
                 <div class="social-icons">
                     <a href="https://pin.it/48FWTzv5J" target="_blank">
-                        <img src="../project-images/pinterest-logo.png" alt="Pinterest Icon" ></a>
+                    <img src="../project-images/pinterest-logo.png" alt="Pinterest Icon">
+                    </a>
                     <a href="https://open.spotify.com/user/scg_swim0405?si=25ab663302974f62" target="_blank">
-                        <img src="../project-images/spotify-logo.jpeg" alt="Spotify Icon" ></a> 
+                    <img src="../project-images/spotify-logo.jpeg" alt="Spotify Icon">
+                    </a>
                 </div>
             </div>
         </div>
 
         <p class="tagline">"CREATIVE. PASSIONATE. CURIOUS."</p>
-        <p class="copyright">&copy; 2025 Sofia Georgallis  &trade;</p>
+        <p class="copyright">&copy; 2025 Sofia Georgallis &trade;</p>
     </footer>
 
     <script>
 document.addEventListener("DOMContentLoaded", () => {
-
-  /* ============================
-     SCROLL ANIMATIONS (Portfolio)
-  ============================ */
   const sections = document.querySelectorAll("main section");
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          // Fade / bounce reveal
           entry.target.classList.add(
             "visible",
             index % 2 === 0 ? "fade-left" : "fade-right",
             "bounce"
           );
 
-          // Stagger inner items like images or videos
-          const innerItems = entry.target.querySelectorAll("img, video, article");
-          innerItems.forEach((item, idx) => {
-            item.style.transitionDelay = `${idx * 0.12}s`;
-            item.classList.add("visible");
+          const inner = entry.target.querySelectorAll("img, video, article");
+          inner.forEach((el, idx) => {
+            el.style.transitionDelay = `${idx * 0.12}s`;
+            el.classList.add("visible");
           });
         } else {
-          // Reset when leaving viewport (so it can replay)
           entry.target.classList.remove("visible", "bounce");
-          const innerItems = entry.target.querySelectorAll("img, video, article");
-          innerItems.forEach((item) => {
-            item.classList.remove("visible");
-            item.style.transitionDelay = "0s";
+          const inner = entry.target.querySelectorAll("img, video, article");
+          inner.forEach((el) => {
+            el.classList.remove("visible");
+            el.style.transitionDelay = "0s";
           });
         }
       });
     },
-    { threshold: 0.15 }
+    { threshold: 0.2 }
   );
 
   sections.forEach((section) => observer.observe(section));
-
 });
 </script>
+
+
 
     </body>
 </html>

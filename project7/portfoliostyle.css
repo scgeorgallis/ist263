@@ -1,3 +1,77 @@
+/* === GLOBAL BASE === */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+  color: #000;
+  font-family: "Work Sans", sans-serif;
+}
+
+.portfolio-header {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.hero-media {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.hero-media video {
+  flex: 1 1 50%;
+  height: 85vh;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* === GLOBAL TYPOGRAPHY === */
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  color: #000;
+  margin: 0;
+}
+p { font-family: "Work Sans", sans-serif; }
+
+/* === NAVIGATION (shared across all pages) === */
+.main-nav {
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.main-nav.scrolled {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #aaa;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 6%;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  margin-left: 25px;
+  transition: opacity 0.3s ease;
+}
+.nav-links a:hover { opacity: 0.6; }
 .portfolio-page {
   font-family: "Work Sans", Arial, sans-serif; 
   color: #000; 
@@ -496,4 +570,65 @@
   .portfolio-page .portfolio-footer .social-icons {
     justify-content: center;}
 }
+
+/* --- MATCH HOMEPAGE MOTION & EDGE STYLING --- */
+.portfolio-header video {
+  border-radius: 30px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-header p {
+  max-width: 900px;
+  margin: 30px auto 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease-out 0.6s forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- UNIVERSAL SCROLL-IN ANIMATIONS --- */
+section, img, video, article {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.3, 1);
+}
+
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+section.fade-left { transform: translateX(-80px); }
+section.fade-right { transform: translateX(80px); }
+section.fade-left.visible, section.fade-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.95) translateY(40px); }
+  60%  { opacity: 1; transform: scale(1.02) translateY(-10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+.bounce { animation: bounceIn 0.9s ease forwards; }
+
+section:not(.visible) {
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
 
