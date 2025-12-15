@@ -1,4 +1,6 @@
-/* === GLOBAL BASE === */
+/* =========================================================
+   GLOBAL BASE
+========================================================= */
 html, body {
   margin: 0;
   padding: 0;
@@ -9,22 +11,29 @@ html, body {
   font-family: "Work Sans", sans-serif;
 }
 
-/* === GLOBAL TYPOGRAPHY === */
+/* =========================================================
+   GLOBAL TYPOGRAPHY
+========================================================= */
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
   color: #000;
   margin: 0;
 }
-p { font-family: "Work Sans", sans-serif; }
 
-/* === NAVIGATION === */
+p {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
 .main-nav {
-  background-color: #fff;
-  border-bottom: 1px solid #000;
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 999;
+  background-color: #fff;
+  border-bottom: 1px solid #000;
+  padding-top: 5px;
   transition: background-color 0.3s ease, border-bottom 0.3s ease;
 }
 
@@ -49,25 +58,35 @@ p { font-family: "Work Sans", sans-serif; }
   margin-left: 25px;
   transition: opacity 0.3s ease;
 }
-.nav-links a:hover { opacity: 0.6; }
 
-/* === PAGE BASE === */
+.nav-links a:hover {
+  opacity: 0.6;
+}
+
+/* =========================================================
+   PAGE BASE
+========================================================= */
 .portfolio-page {
   font-family: "Work Sans", Arial, sans-serif;
   color: #000;
   background: #fff;
   line-height: 1.6;
 }
-.portfolio-page h1, .portfolio-page h2, .portfolio-page h3 {
+
+.portfolio-page h1,
+.portfolio-page h2,
+.portfolio-page h3 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   letter-spacing: 0.3px;
 }
 
-/* === HEADER === */
+/* =========================================================
+   HEADER
+========================================================= */
 .portfolio-header {
   width: 90%;
-  margin: 40px auto 60px;
+  margin: 60px auto;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
@@ -83,7 +102,7 @@ p { font-family: "Work Sans", sans-serif; }
   border-radius: 30px;
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeUp 1.2s ease-out forwards; /* auto plays */
+  animation: fadeUp 1.2s ease-out forwards;
   animation-delay: 0.1s;
 }
 
@@ -96,9 +115,12 @@ p { font-family: "Work Sans", sans-serif; }
   text-align: justify;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeUp 1s ease-out 0.8s forwards; /* slight delay after video */
+  animation: fadeUp 1s ease-out 0.8s forwards;
 }
 
+/* =========================================================
+   SCROLL ANIMATION
+========================================================= */
 @keyframes fadeUp {
   to {
     opacity: 1;
@@ -106,7 +128,12 @@ p { font-family: "Work Sans", sans-serif; }
   }
 }
 
-/* === SECTIONS === */
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.95) translateY(40px); }
+  60% { opacity: 1; transform: scale(1.02) translateY(-10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
 section {
   width: 88%;
   margin: 0 auto 100px;
@@ -114,62 +141,61 @@ section {
   transform: translateY(60px);
   transition: opacity 1s ease, transform 1s cubic-bezier(0.25, 1, 0.3, 1);
 }
+
 section.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 section.bounce {
   animation: bounceIn 1s ease forwards;
 }
 
 section.fade-left { transform: translateX(-80px); }
 section.fade-right { transform: translateX(80px); }
-section.fade-left.visible, section.fade-right.visible {
+section.fade-left.visible,
+section.fade-right.visible {
   transform: translateX(0);
   opacity: 1;
 }
 
-/* === UNIVERSAL MEDIA + HOVER === */
+/* =========================================================
+   UNIVERSAL MEDIA + HOVER
+========================================================= */
 img, video, article {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 img:hover, video:hover, article:hover {
   transform: scale(1.03);
 }
 
-/* === ANIMATION KEYFRAMES === */
-@keyframes fadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes bounceIn {
-  0% { opacity: 0; transform: scale(0.95) translateY(40px); }
-  60% { opacity: 1; transform: scale(1.02) translateY(-10px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-/* === SPECIFIC SECTIONS (your layout untouched) === */
-
-/* Styling + Mood Boards */
+/* =========================================================
+   STYLING + MOOD BOARDS
+========================================================= */
 .portfolio-page .styling-section {
   width: 88%;
   margin: 0 auto 80px;
   text-align: center;
 }
+
 .portfolio-page .styling-section h2 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
   font-size: 5rem;
   text-transform: uppercase;
-  margin: 0 0 0.6rem;
+  margin-bottom: 0.6rem;
 }
+
 .portfolio-page .styling-section > p {
   font-style: italic;
   font-size: 0.75rem;
   color: #333;
   margin: 0 auto 2.5rem;
   max-width: 700px;
-  line-height: 1;
+  line-height: 1.2;
 }
+
 .portfolio-page .styling-section .projects {
   display: flex;
   justify-content: center;
@@ -179,11 +205,13 @@ img:hover, video:hover, article:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .portfolio-page .styling-section .projects article {
   flex: 1 1 45%;
   max-width: 500px;
   text-align: left;
 }
+
 .portfolio-page .styling-section .projects article h3 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
@@ -191,25 +219,29 @@ img:hover, video:hover, article:hover {
   text-transform: uppercase;
   margin-bottom: 0.3rem;
 }
+
 .portfolio-page .styling-section .projects article p {
   font-size: 0.85rem;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
+
 .portfolio-page .styling-section .projects article img {
   display: block;
   margin: 0.5rem auto 0;
-  border: none;
   max-width: 100%;
   height: auto;
 }
 
-/* Photography */
+/* =========================================================
+   PHOTOGRAPHY
+========================================================= */
 .portfolio-page .photography-section {
   width: 88%;
   margin: 0 auto 100px;
   text-align: center;
 }
+
 .portfolio-page .photography-section h2 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
@@ -217,6 +249,7 @@ img:hover, video:hover, article:hover {
   text-transform: uppercase;
   margin-bottom: 0.6rem;
 }
+
 .portfolio-page .photography-section > p {
   font-style: italic;
   font-size: 0.75rem;
@@ -224,6 +257,7 @@ img:hover, video:hover, article:hover {
   margin: 0 auto 2.5rem;
   max-width: 700px;
 }
+
 .portfolio-page .photography-section .photo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -232,6 +266,7 @@ img:hover, video:hover, article:hover {
   margin: 0 auto 2rem;
   max-width: 1100px;
 }
+
 .portfolio-page .photography-section .photo-grid img {
   width: 100%;
   height: 100%;
@@ -239,12 +274,47 @@ img:hover, video:hover, article:hover {
   border: none;
 }
 
-/* Graphic Section */
+.portfolio-page .photography-section .info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  text-align: left;
+}
+
+.portfolio-page .photography-section .info-grid h3,
+.portfolio-page .photography-section .under-info h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.portfolio-page .photography-section .info-grid p,
+.portfolio-page .photography-section .under-info p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-page .photography-section .under-info {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* =========================================================
+   GRAPHIC DESIGN
+========================================================= */
 .portfolio-page .graphic-section {
   width: 88%;
   margin: 40px auto 100px;
   text-align: center;
 }
+
 .portfolio-page .graphic-section h2 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
@@ -252,6 +322,7 @@ img:hover, video:hover, article:hover {
   text-transform: uppercase;
   margin-bottom: 0.4rem;
 }
+
 .portfolio-page .graphic-section > p {
   font-style: italic;
   font-size: 0.75rem;
@@ -259,6 +330,7 @@ img:hover, video:hover, article:hover {
   margin: 0 auto 2rem;
   max-width: 700px;
 }
+
 .portfolio-page .graphic-section .design-info {
   display: flex;
   flex-direction: column;
@@ -267,6 +339,30 @@ img:hover, video:hover, article:hover {
   margin: 0 auto;
   max-width: 1100px;
 }
+
+.portfolio-page .graphic-section .leftside-info {
+  text-align: left;
+  align-self: flex-start;
+  max-width: 400px;
+  margin-left: 8%;
+}
+
+.portfolio-page .graphic-section .right-info {
+  text-align: right;
+  align-self: flex-end;
+  max-width: 400px;
+  margin-right: 8%;
+}
+
+.portfolio-page .graphic-section .leftside-info h3,
+.portfolio-page .graphic-section .right-info h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
 .portfolio-page .graphic-section .design-grid {
   display: flex;
   justify-content: center;
@@ -275,19 +371,24 @@ img:hover, video:hover, article:hover {
   flex-wrap: nowrap;
   width: 100%;
 }
+
 .portfolio-page .graphic-section .design-grid img {
   width: 100%;
   max-width: 300px;
   height: auto;
   object-fit: contain;
+  border: none;
 }
 
-/* Video Section */
+/* =========================================================
+   VIDEO
+========================================================= */
 .portfolio-page .video-section {
   width: 88%;
   margin: 0 auto 120px;
   text-align: center;
 }
+
 .portfolio-page .video-section h2 {
   font-family: "Playfair Display", serif;
   font-weight: 800;
@@ -295,6 +396,7 @@ img:hover, video:hover, article:hover {
   text-transform: uppercase;
   margin-bottom: 0.5rem;
 }
+
 .portfolio-page .video-section .video-intro {
   font-style: italic;
   font-size: 0.8rem;
@@ -303,6 +405,7 @@ img:hover, video:hover, article:hover {
   margin: 0 auto 2rem;
   line-height: 1.2;
 }
+
 .portfolio-page .video-section .video-grid {
   display: flex;
   flex-wrap: wrap;
@@ -311,6 +414,7 @@ img:hover, video:hover, article:hover {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .portfolio-page .video-section .video-grid video {
   width: 240px;
   height: 150px;
@@ -319,56 +423,68 @@ img:hover, video:hover, article:hover {
   border-radius: 8px;
   transition: transform 0.3s ease;
 }
+
 .portfolio-page .video-section .video-grid video:hover {
   transform: scale(1.05);
 }
 
-/* === FOOTER === */
+/* =========================================================
+   FOOTER
+========================================================= */
 .portfolio-page .portfolio-footer {
   width: 88%;
   margin: 80px auto 40px;
   font-family: "Work Sans", sans-serif;
   color: #111;
 }
+
 .portfolio-page .portfolio-footer hr {
   border: none;
   border-top: 1px solid #000;
   margin-bottom: 30px;
 }
+
 .footer-layout {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
 }
+
 .footer-info strong {
   font-family: "Bebas Neue", sans-serif;
   font-size: 1.1rem;
 }
+
 .footer-info a {
   color: #000;
   text-decoration: none;
   transition: all 0.3s ease;
 }
+
 .footer-info a:hover {
   border-bottom: 1px solid #000;
   opacity: 0.7;
 }
+
 .footer-fun h3 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 2rem;
   letter-spacing: 6px;
 }
+
 .social-icons img {
   width: 40px;
   height: 40px;
   border-radius: 4px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
+
 .social-icons img:hover {
   transform: translateY(-5px) scale(1.05);
   filter: brightness(1.2);
 }
+
 footer .tagline {
   text-align: center;
   font-family: "Playfair Display", serif;
@@ -377,6 +493,7 @@ footer .tagline {
   margin-top: 40px;
   color: #333;
 }
+
 footer .copyright {
   text-align: center;
   font-size: 0.7rem;
@@ -384,99 +501,17 @@ footer .copyright {
   margin-top: 8px;
 }
 
-/* === RESPONSIVE === */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 @media (max-width: 900px) {
   .footer-layout {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .social-icons { justify-content: center; }
-}
 
-/* fix nav cutoff & header alignment */
-.main-nav {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: #fff;
-  border-bottom: 1px solid #000;
-  padding-top: 5px;
-}
-
-/* ensure header sits below nav */
-.portfolio-header {
-  margin-top: 20px;
-}
-
-/* === TYPOGRAPHY + LAYOUT RESET for section consistency === */
-
-/* global section spacing reset */
-.portfolio-page section {
-  width: 88%;
-  margin: 0 auto 100px;
-  text-align: center;
-}
-
-/* title headers (like STYLING, PHOTOGRAPHY, etc.) */
-.portfolio-page section h2 {
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  margin-bottom: 0.6rem;
-}
-
-/* section subtitles (italic intro text under h2) */
-.portfolio-page section > p {
-  font-family: "Work Sans", sans-serif;
-  font-style: italic;
-  font-size: 0.75rem;
-  color: #333;
-  margin: 0 auto 2.5rem;
-  max-width: 700px;
-  line-height: 1.2;
-}
-
-/* subheadings inside each section (like “Personal Collections”, “Abstract Archive”, etc.) */
-.portfolio-page section h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 700;
-  font-size: 2.4rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  line-height: 1;
-  margin-bottom: 0.3rem;
-  color: #000;
-}
-
-/* descriptive text under subheadings */
-.portfolio-page section article p,
-.portfolio-page section .info-grid p,
-.portfolio-page section .under-info p,
-.portfolio-page section .design-info p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.85rem;
-  line-height: 1.1;
-  color: #111;
-  margin-bottom: 0.5rem;
-  text-align: left;
-}
-
-/* images and grids keep original formatting */
-.portfolio-page .photo-grid img,
-.portfolio-page .design-grid img,
-.portfolio-page .video-grid video {
-  border: none;
-  border-radius: 4px;
-  display: block;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* center under-info blocks */
-.portfolio-page .under-info {
-  text-align: center;
-  margin-top: 3rem;
+  .social-icons {
+    justify-content: center;
+  }
 }
