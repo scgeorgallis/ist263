@@ -10,27 +10,6 @@
   <link rel="stylesheet" href="projectstyle.css">
 </head>
 
-<script>
-  // Typing animation stays here (keep your existing one above this)
-
-  // --- Scroll animation setup ---
-  const sections = document.querySelectorAll("main section");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible", "bounce");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
-
-
 <body>
   <nav class="main-nav">
     <div class="nav-container">
@@ -120,6 +99,9 @@
     </footer>
 
     <script>
+  /* ============================
+     LOOPING TYPING ANIMATION
+  ============================ */
   const text = "CREATIVE. PASSIONATE. CURIOUS.";
   const typingEl = document.getElementById("typing");
   let i = 0;
@@ -144,27 +126,37 @@
   }
 
   window.onload = typeLoop;
-  // Typing effect (keep your existing looping one above)
 
-  // --- Scroll animations ---
+
+
+  /* ============================
+     SCROLL ANIMATIONS
+     (retrigger every time)
+  ============================ */
   const sections = document.querySelectorAll("main section");
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        // alternate directions based on section order
-        entry.target.classList.add(
-          "visible",
-          index % 2 === 0 ? "fade-left" : "fade-right",
-          "bounce"
-        );
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // alternate direction left/right
+          entry.target.classList.add(
+            "visible",
+            index % 2 === 0 ? "fade-left" : "fade-right",
+            "bounce"
+          );
+        } else {
+          // remove visibility when leaving viewport (so it can replay)
+          entry.target.classList.remove("visible", "bounce");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
-  sections.forEach(section => observer.observe(section));
+  sections.forEach((section) => observer.observe(section));
 </script>
+
 
 
     
