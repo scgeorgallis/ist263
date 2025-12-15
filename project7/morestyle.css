@@ -25,28 +25,43 @@ p { font-family: "Work Sans", sans-serif; }
 /* =========================================================
    NAVIGATION
 ========================================================= */
-nav {
+/* === NAVIGATION (same as homepage/portfolio) === */
+.main-nav {
   background-color: #fff;
   border-bottom: 1px solid #000;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 999;
-  text-align: right;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  padding-top: 5px;
+}
+
+.main-nav.scrolled {
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #aaa;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
   padding: 15px 6%;
 }
 
-nav a {
+.nav-links a {
   color: #000;
   text-decoration: none;
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 1.5rem;
+  letter-spacing: 0.5px;
   margin-left: 25px;
   transition: opacity 0.3s ease;
 }
 
-nav a:hover { opacity: 0.6; }
+.nav-links a:hover {
+  opacity: 0.6;
+}
 
 /* =========================================================
    HEADER
