@@ -419,3 +419,104 @@ section, .tile {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+.tile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.tile:hover {
+  transform: translateY(-6px) rotate(1deg) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* === FOOTER (match homepage + portfolio) === */
+footer {
+  background-color: #fff;
+  padding: 40px 6%;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  color: #000;
+  margin-top: 60px;
+  border-top: 1px solid #000;
+}
+
+.footer-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.footer-info p {
+  margin: 6px 0;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.footer-info a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.footer-info a:hover {
+  border-bottom: 1px solid #000;
+}
+
+.footer-fun {
+  text-align: right;
+}
+
+.footer-fun h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+.tagline {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 20px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  margin-top: 10px;
+  letter-spacing: 0.5px;
+  opacity: 0.8;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .footer-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-fun {
+    text-align: center;
+  }
+}

@@ -108,8 +108,11 @@ p {
 
 .portfolio-header p {
   max-width: 900px;
-  margin: 30px auto 0;
+  margin-top: 30px;
   font-size: 1rem;
+  font-style:italic;
+  position: relative;
+  bottom: 0;
   line-height: 1.7;
   color: #333;
   text-align: justify;
@@ -566,3 +569,65 @@ footer .copyright {
     justify-content: center;
   }
 }
+
+.portfolio-page h2 {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+}
+
+section.visible {
+  animation: bounceIn 1s ease forwards;
+}
+
+.styling-section > p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.photography-section h2 {
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+.photography-section > p {
+  font-size: 1rem;
+}
+
+.photo-grid {
+  grid-auto-rows: 350px;
+  gap: 20px;
+}
+
+.design-info {
+  flex-wrap: wrap;
+}
+.design-grid {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.graphic-section > p {
+  font-size: 1rem;
+}
+
+.video-section h2 {
+  font-size: clamp(4rem, 8vw, 6rem);
+}
+.video-intro {
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+.video-grid {
+  gap: 30px;
+  flex-wrap: wrap;
+  transform: rotate(-1deg);
+}
+.video-grid video:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+.video-grid video:nth-child(even) {
+  transform: rotate(1.5deg);
+}
+.video-grid video:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+
