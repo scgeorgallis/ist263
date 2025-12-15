@@ -28,7 +28,7 @@
 
     <div class="hero-text ">
       <h1>SOFIA GEORGALLIS</h1>
-      <h2 id="typing"></h2>
+      <h2 id="typing" label="Typing animation">CREATIVE. PASSIONATE. CURIOUS.</h2>
       <p>
         I'm a junior at Syracuse University studying Innovation, Society, and Technology with a focus in Digital Retail Strategies.
         This site is my creative portfolio, a space where I share the projects I love most. I’ve styled for campus magazines,
@@ -105,27 +105,31 @@ document.addEventListener("DOMContentLoaded", () => {
      LOOPING TYPING ANIMATION
   ============================ */
   const text = "CREATIVE. PASSIONATE. CURIOUS.";
-  const typingEl = document.getElementById("typing");
-  let i = 0;
-  let deleting = false;
+const typingEl = document.getElementById("typing");
+let i = 0;
+let deleting = false;
 
-  function typeLoop() {
-    if (!deleting && i < text.length) {
-      typingEl.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeLoop, 75);
-    } else if (i === text.length && !deleting) {
-      deleting = true;
-      setTimeout(typeLoop, 1500);
-    } else if (deleting && i > 0) {
-      typingEl.textContent = text.substring(0, i - 1);
-      i--;
-      setTimeout(typeLoop, 40);
-    } else if (deleting && i === 0) {
-      deleting = false;
-      setTimeout(typeLoop, 600);
-    }
+// clear placeholder before typing starts
+typingEl.textContent = "";
+
+function typeLoop() {
+  if (!deleting && i < text.length) {
+    typingEl.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeLoop, 75);
+  } else if (i === text.length && !deleting) {
+    deleting = true;
+    setTimeout(typeLoop, 1500);
+  } else if (deleting && i > 0) {
+    typingEl.textContent = text.substring(0, i - 1);
+    i--;
+    setTimeout(typeLoop, 40);
+  } else if (deleting && i === 0) {
+    deleting = false;
+    setTimeout(typeLoop, 600);
   }
+}
+
 
   // run typing after a short delay so animations initialize first
   setTimeout(typeLoop, 300);
