@@ -698,3 +698,13 @@ section.fade-left.visible, section.fade-right.visible {
   transform: translateY(0);
 }
 
+.hero-media video,
+.hero-media img {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 1;
+  width: 50%;
+  height: 85vh;
+  object-fit: cover;
+}
