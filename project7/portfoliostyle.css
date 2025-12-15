@@ -277,38 +277,56 @@ img:hover, video:hover, article:hover {
 .portfolio-page .photography-section .info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  max-width: 900px;
-  margin: 2rem auto 0;
+  align-items: start;
+  gap: 60px 80px; /* balanced spacing horizontally + vertically */
+  max-width: 1000px;
+  margin: 2rem auto 3rem;
   text-align: left;
 }
 
-.portfolio-page .photography-section .info-grid h3,
-.portfolio-page .photography-section .under-info h3 {
+/* header + paragraph alignment */
+.portfolio-page .photography-section .info-grid h3 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
-  margin-bottom: 0.3rem;
-}
-
-.portfolio-page .photography-section .info-grid p,
-.portfolio-page .photography-section .under-info p {
-  font-family: "Work Sans", sans-serif;
-  font-size: 0.85rem;
+  letter-spacing: 0.3px;
   line-height: 1.1;
-  color: #111;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
+.portfolio-page .photography-section .info-grid p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #111;
+  margin: 0;
+  max-width: 90%;
+}
+
+/* make sure last section ("under-info") aligns naturally after grid */
 .portfolio-page .photography-section .under-info {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
+  opacity: 0.9;
 }
 
-/* =========================================================
-   GRAPHIC DESIGN
-========================================================= */
+/* responsive layout */
+@media (max-width: 900px) {
+  .portfolio-page .photography-section .info-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .portfolio-page .photography-section .info-grid p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+/* === GRAPHIC DESIGN SECTION FIX === */
 .portfolio-page .graphic-section {
   width: 88%;
   margin: 40px auto 100px;
@@ -325,33 +343,29 @@ img:hover, video:hover, article:hover {
 
 .portfolio-page .graphic-section > p {
   font-style: italic;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: #333;
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.5rem;
   max-width: 700px;
+  line-height: 1.4;
 }
 
+/* new layout — left/right text around design grid */
 .portfolio-page .graphic-section .design-info {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 25px;
-  margin: 0 auto;
+  flex-wrap: nowrap;
+  gap: 40px;
   max-width: 1100px;
-}
-
-.portfolio-page .graphic-section .leftside-info {
+  margin: 0 auto;
   text-align: left;
-  align-self: flex-start;
-  max-width: 400px;
-  margin-left: 8%;
 }
 
+.portfolio-page .graphic-section .leftside-info,
 .portfolio-page .graphic-section .right-info {
-  text-align: right;
-  align-self: flex-end;
-  max-width: 400px;
-  margin-right: 8%;
+  width: 25%;
+  min-width: 250px;
 }
 
 .portfolio-page .graphic-section .leftside-info h3,
@@ -361,15 +375,25 @@ img:hover, video:hover, article:hover {
   font-size: 2.4rem;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
+  letter-spacing: 0.3px;
+}
+
+.portfolio-page .graphic-section .leftside-info p,
+.portfolio-page .graphic-section .right-info p {
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #111;
+  margin: 0;
 }
 
 .portfolio-page .graphic-section .design-grid {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   flex-wrap: nowrap;
-  width: 100%;
 }
 
 .portfolio-page .graphic-section .design-grid img {
@@ -377,7 +401,34 @@ img:hover, video:hover, article:hover {
   max-width: 300px;
   height: auto;
   object-fit: contain;
+  display: block;
   border: none;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-page .graphic-section .design-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* responsive adjustments */
+@media (max-width: 900px) {
+  .portfolio-page .graphic-section .design-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .portfolio-page .graphic-section .leftside-info,
+  .portfolio-page .graphic-section .right-info {
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .portfolio-page .graphic-section .design-grid {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
 
 /* =========================================================
